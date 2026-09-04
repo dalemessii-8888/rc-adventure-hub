@@ -4,7 +4,7 @@ slug: "best-rc-cars-for-adults"
 category: cars
 meta_description: "A practical guide to choosing your first hobby-grade RC car as an adult -- what actually matters, which models are worth it, and what to skip."
 date: 2026-09-04
-products: [traxxas-slash-4x4, arrma-granite, arrma-typhon, redcat-racing-volcano, deerc-9309e, hylukon-drift-car]
+products: [traxxas-slash-4x4, arrma-granite, losi-micro-b, redcat-volcano-epx, deerc-9309e, hylukon-drift-car]
 ---
 
 If you're an adult looking to get into RC cars, the hardest part isn't finding a car -- it's wading through hundreds of near-identical Amazon listings to figure out which ones are actual hobby-grade vehicles you can repair and upgrade, and which are toy-grade cars that will crack in half the first time you clip a curb.
@@ -35,17 +35,17 @@ If the Slash is slightly outside your budget, the Granite gets you into genuine 
 
 {{product:arrma-granite}}
 
-### Best "second car" once you've got the basics down: ARRMA Typhon
+### Best "second car" once you've got the basics down: Losi Micro-B 2WD Buggy
 
-The Typhon is a 4WD buggy built for speed and cornering rather than durability-first bashing. It's not the car to learn throttle control on, but once you've got a season of driving behind you, it's a genuinely fun step up.
+This pick looks different from everything else on this list, and that's on purpose: it's a 1/24 micro buggy, not a scaled-down truck. Once you've got a season of driving behind you and want something built for speed and cornering rather than durability-first bashing, the Micro-B is a genuinely well-reviewed, cheap way into actual RC racing -- built by Losi (Horizon Hobby's racing-focused brand) with an aluminum chassis and real oil-filled shocks, not a toy underneath the small scale.
 
-{{product:arrma-typhon}}
+{{product:losi-micro-b}}
 
-### Best budget entry point: Redcat Racing Volcano
+### Best budget entry point: Redcat Racing Volcano EPX
 
-If you're not sure the hobby is for you yet and don't want to spend Traxxas or ARRMA money to find out, the Volcano is a legitimate hobby-grade truck (not toy-grade) at a noticeably lower price. The tradeoff is thinner parts availability and a less refined feel -- fine for finding out if you like driving RC cars, less fine as a long-term only car.
+If you're not sure the hobby is for you yet and don't want to spend Traxxas or ARRMA money to find out, the Volcano EPX is a legitimate hobby-grade truck (not toy-grade) at a noticeably lower price -- and unlike a lot of budget RTRs, it actually ships with the battery, charger, and radio included, so there's nothing extra to buy before your first drive. The tradeoff is thinner parts availability and a less refined feel -- fine for finding out if you like driving RC cars, less fine as a long-term only car.
 
-{{product:redcat-racing-volcano}}
+{{product:redcat-volcano-epx}}
 
 ### Budget / toy-adjacent pick: DEERC 9309E
 
