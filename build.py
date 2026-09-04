@@ -73,13 +73,21 @@ def resolve_product_link(product, config):
 
     # avantlink / shareasale / direct without an override yet -> safe,
     # working, NON-affiliate fallback link so nothing is ever dead.
+    # If pending_product_url is set, we've identified the exact real
+    # product page (and its photo) even though the link isn't monetized
+    # yet -- use that instead of a generic search, so the photo always
+    # matches what the link actually points to.
     merchant_name = product.get("merchant_name", "Retailer")
-    template = MERCHANT_SEARCH_TEMPLATES.get(merchant_name)
-    q = urllib.parse.quote_plus(product["search_query"])
-    if template:
-        url = template.format(q=q)
+    pending_url = product.get("pending_product_url")
+    if pending_url:
+        url = pending_url
     else:
-        url = f"https://www.google.com/search?q={q}"
+        template = MERCHANT_SEARCH_TEMPLATES.get(merchant_name)
+        q = urllib.parse.quote_plus(product["search_query"])
+        if template:
+            url = template.format(q=q)
+        else:
+            url = f"https://www.google.com/search?q={q}"
     return url, f"Check Price at {merchant_name} (affiliate link pending)", True
 
 
@@ -92,8 +100,15 @@ def render_product_card(product_id, products_by_id, config):
         return f'<p style="color:red">[Unknown product id: {product_id}]</p>'
     url, label, pending = resolve_product_link(product, config)
     pending_badge = '<span class="pending-badge">link pending</span>' if pending else ""
+    image_url = product.get("image_url")
+    image_html = (
+        f'<img class="product-card-photo" src="{image_url}" alt="{product["name"]}" loading="lazy">'
+        if image_url
+        else ""
+    )
     return f"""
 <div class="product-card">
+  {image_html}
   <div class="product-card-body">
     <h3>{product['name']}</h3>
     <p>{product['blurb']}</p>
