@@ -16,32 +16,63 @@
 #   shareasale -> same idea, for ShareASale-network brands
 #   direct     -> plain non-affiliate link, used as a safe fallback
 #                 while an application is pending
+#
+# image_url: shown on the product card. Hotlinked from the retailer's
+#   own CDN (never re-hosted), so it always matches whatever the CTA
+#   button links to.
+#
+# pending_product_url: for avantlink/shareasale products before you're
+#   approved -- points the (non-monetized, clearly-labeled "pending")
+#   link at the SPECIFIC real product page we sourced the photo from,
+#   instead of a generic on-site search. Once AvantLink approves you,
+#   replace it with a real tracking link in affiliate_url_override and
+#   this field can go away.
 # ============================================================
 
 - id: traxxas-slash-4x4
   name: "Traxxas Slash 4X4"
   category: cars
   merchant: amazon
+  # This is the "Ultimate" trim (higher-spec, no battery/charger included)
+  # -- it's the only Slash 4X4 currently sold as a complete vehicle on
+  # Amazon.ca. Cheaper standard RTR kits exist at hobby shops but aren't
+  # on Amazon right now.
+  affiliate_url_override: "https://www.amazon.ca/dp/B07JZXKHSM?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
   search_query: "Traxxas Slash 4X4 RTR"
-  blurb: "The default recommendation for a first hobby-grade RC car -- tough, widely supported, huge parts availability."
+  image_url: "https://m.media-amazon.com/images/I/611o54Yh6PL._AC_SX522_.jpg"
+  blurb: "The default recommendation for a first hobby-grade RC car -- tough, widely supported, huge parts availability. Note: the Amazon listing is the higher-spec 'Ultimate' trim and doesn't include a battery or charger."
 
 - id: arrma-granite
   name: "ARRMA Granite"
   category: cars
   merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0DVN2TBMB?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
   search_query: "ARRMA Granite RC truck RTR"
+  image_url: "https://m.media-amazon.com/images/I/71Rj4wxUcvL._AC_SX522_.jpg"
   blurb: "Monster-truck styling with genuinely rebuildable hobby-grade internals at a lower price than Traxxas."
 
 - id: arrma-typhon
   name: "ARRMA Typhon"
   category: cars
-  merchant: amazon
+  # Not currently sold as a complete vehicle on Amazon.ca (only spare
+  # parts show up there) -- Horizon Hobby is the real source, same as
+  # every other ARRMA/Horizon Hobby brand on this site.
+  merchant: avantlink
+  merchant_name: "Horizon Hobby"
+  pending_product_url: "https://www.horizonhobby.com/product/arrma-1-8-typhon-223s-dsc-4x4-rtr-brushless-buggy-green/ARA4306V4.html"
+  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dwea33ea2b/Images/ARA/ARA4306V4T1_A73_FGQ8H94Z.jpg"
   search_query: "ARRMA Typhon 4x4 RTR"
   blurb: "A buggy built for speed once you've outgrown a beginner truck."
 
 - id: redcat-racing-volcano
   name: "Redcat Racing Volcano"
   category: cars
+  # Heads up: this model appears to be discontinued -- it no longer
+  # turns up as a complete vehicle on Amazon.ca, AMain Hobbies, or
+  # Horizon Hobby, only legacy replacement parts. Worth swapping this
+  # pick for a currently-sold Redcat model when you get a chance.
   merchant: amazon
   search_query: "Redcat Racing Volcano RC truck RTR"
   blurb: "Budget-friendly hobby-grade entry point, good for testing whether the hobby is for you before spending Traxxas money."
@@ -60,45 +91,81 @@
   image_url: "https://m.media-amazon.com/images/I/71be7NLxnyL._AC_SX522_.jpg"
   blurb: "Toy-grade, not hobby-grade -- but genuinely waterproof, ships with two batteries, and a legitimately fun budget basher if you just want to drive something today."
 
+- id: hylukon-drift-car
+  name: "Hylukon 1:43 Desktop Drift Car"
+  category: cars
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0FYN7YF56?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "Hylukon 1:43 Scale Mini RC Drift Car"
+  image_url: "https://m.media-amazon.com/images/I/71QCFRYZuHL._AC_SX522_.jpg"
+  blurb: "A completely different category from everything else on this list: a palm-sized 1:43 desktop drift car with a gyro and interchangeable tires, built to slide around on a desk or coffee table, not a driveway. Cheap, genuinely entertaining, and the easiest 'try this hobby' gift there is."
+
 - id: traxxas-spartan
   name: "Traxxas Spartan SR"
   category: boats
   merchant: avantlink
   merchant_name: "AMain Hobbies"
+  pending_product_url: "https://www.amainhobbies.com/traxxas-spartan-sr-6s-highperformance-brushless-rtr-race-boat-green-tra103076-4-grn/p1552468"
+  image_url: "https://images.amainhobbies.com/cdn-cgi/image/f=auto,width=950/images/large/tra/tra103076-4-grn.jpg"
   search_query: "Traxxas Spartan SR boat"
   blurb: "Brushless, self-righting race boat -- the benchmark 'first serious RC boat' for adults."
 
 - id: traxxas-blast
   name: "Traxxas Blast"
   category: boats
-  merchant: amazon
+  # Not currently sold as a complete boat on Amazon.ca either -- AMain
+  # Hobbies is the real source.
+  merchant: avantlink
+  merchant_name: "AMain Hobbies"
+  pending_product_url: "https://www.amainhobbies.com/traxxas-blast-24-high-performance-rtr-race-boat-green-tra38104-8-grn/p1530900"
+  image_url: "https://images.amainhobbies.com/cdn-cgi/image/f=auto,width=950/images/large/tra/tra38104-8-grn.jpg"
   search_query: "Traxxas Blast RC boat"
   blurb: "A smaller, calmer entry point than the Spartan -- better for lakes and first-timers."
 
 - id: pro-boat-recoil
   name: "Pro Boat Recoil"
   category: boats
-  merchant: amazon
+  # Pro Boat is a Horizon Hobby brand and isn't sold as a complete boat
+  # on Amazon.ca -- Horizon Hobby is the real source.
+  merchant: avantlink
+  merchant_name: "Horizon Hobby"
+  pending_product_url: "https://www.horizonhobby.com/product/pro-boat-recoil-2-v2-26-self-righting-brushless-deep-v-rtr-shreddy/PRB08041V2.html"
+  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dwb6a710ac/Images/PRB/PRB08041V2T1_A5_O8ZXKW3B.jpg"
   search_query: "Pro Boat Recoil RC boat"
   blurb: "Self-righting brushless hull aimed squarely at adult hobbyists who want speed without constant capsizing."
 
 - id: hobbyzone-apprentice
-  name: "HobbyZone Apprentice S 2"
+  name: "HobbyZone Apprentice STOL S"
   category: planes
-  merchant: amazon
-  search_query: "HobbyZone Apprentice S 2 RC plane"
+  # The "Apprentice S 2" has been succeeded by the "Apprentice STOL S
+  # 700mm" -- same idea (SAFE-protected beginner trainer), current
+  # generation. Not sold on Amazon.ca; Horizon Hobby is the real source.
+  merchant: avantlink
+  merchant_name: "Horizon Hobby"
+  pending_product_url: "https://www.horizonhobby.com/product/hobbyzone-apprentice-stol-s-700mm-rtf-with-safe/HBZ6100.html"
+  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dw558bfdd0/Images/HBZ/HBZ6100_A12_S45X20TG.jpg"
+  search_query: "HobbyZone Apprentice STOL S RC plane"
   blurb: "Built-in flight envelope protection (SAFE tech) makes this one of the most forgiving trainer planes for true beginners."
 
 - id: hobbyzone-sport-cub
   name: "HobbyZone Sport Cub S 2"
   category: planes
-  merchant: amazon
+  # Not sold on Amazon.ca; Horizon Hobby is the real source.
+  merchant: avantlink
+  merchant_name: "Horizon Hobby"
+  pending_product_url: "https://www.horizonhobby.com/product/hobbyzone-sport-cub-s-2-rtf-with-safe/HBZ444000.html"
+  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dw373bb1d4/Images/HBZ/HBZ444000_A14_7KE8VBLR.jpg"
   search_query: "HobbyZone Sport Cub S 2 RC plane"
   blurb: "Small, slow, park-flyable, and nearly impossible to seriously damage in a beginner crash."
 
 - id: eflite-timber
   name: "E-flite Timber"
   category: planes
-  merchant: amazon
+  # Not sold on Amazon.ca; Horizon Hobby is the real source.
+  merchant: avantlink
+  merchant_name: "Horizon Hobby"
+  pending_product_url: "https://www.horizonhobby.com/product/e-flite-timber-1.5m-10th-anniversary-special-edition-bnf-basic-with-as3x-and-safe-select/EFL-3352.html"
+  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dw58c161ff/Images/EFL/EFL-3352_A3_M49881QI.jpg"
   search_query: "E-flite Timber RC plane"
   blurb: "STOL-style trainer for pilots who've soloed the basics and want a plane that handles rougher fields and grass strips."
