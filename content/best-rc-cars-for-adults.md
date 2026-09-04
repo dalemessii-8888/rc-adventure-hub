@@ -4,7 +4,7 @@ slug: "best-rc-cars-for-adults"
 category: cars
 meta_description: "A practical guide to choosing your first hobby-grade RC car as an adult -- what actually matters, which models are worth it, and what to skip."
 date: 2026-09-04
-products: [traxxas-slash-4x4, arrma-granite, arrma-typhon, redcat-racing-volcano]
+products: [traxxas-slash-4x4, arrma-granite, arrma-typhon, redcat-racing-volcano, deerc-9309e]
 ---
 
 If you're an adult looking to get into RC cars, the hardest part isn't finding a car -- it's wading through hundreds of near-identical Amazon listings to figure out which ones are actual hobby-grade vehicles you can repair and upgrade, and which are toy-grade cars that will crack in half the first time you clip a curb.
@@ -46,6 +46,14 @@ The Typhon is a 4WD buggy built for speed and cornering rather than durability-f
 If you're not sure the hobby is for you yet and don't want to spend Traxxas or ARRMA money to find out, the Volcano is a legitimate hobby-grade truck (not toy-grade) at a noticeably lower price. The tradeoff is thinner parts availability and a less refined feel -- fine for finding out if you like driving RC cars, less fine as a long-term only car.
 
 {{product:redcat-racing-volcano}}
+
+### Budget / toy-adjacent pick: DEERC 9309E
+
+This one's not hobby-grade, and we're not going to pretend it is -- it's a sealed-unit toy-grade truck, so when something breaks you're not ordering a $6 replacement part, you're replacing the truck. That said, it earns a spot on this list because it's an honest version of what it is: it's genuinely waterproof (not just splash-resistant), it ships with two batteries instead of one, and it's a legitimately fun way to go drive something in the backyard today for a fraction of hobby-grade money. Think of it as the "find out if you even like driving RC vehicles before you spend Traxxas money" option, one rung below the Volcano above.
+
+<img src="https://m.media-amazon.com/images/I/71be7NLxnyL._AC_SX522_.jpg" alt="DEERC 9309E RC truck" class="product-photo" loading="lazy">
+
+{{product:deerc-9309e}}
 
 ## What we'd skip
 
