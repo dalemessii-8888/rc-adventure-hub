@@ -40,7 +40,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B07JZXKHSM?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "Traxxas Slash 4X4 RTR"
-  image_url: "https://m.media-amazon.com/images/I/611o54Yh6PL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/611o54Yh6PL._AC_SL1500_.jpg"
   blurb: "The default recommendation for a first hobby-grade RC car -- tough, widely supported, huge parts availability. Note: the Amazon listing is the higher-spec 'Ultimate' trim and doesn't include a battery or charger."
 
 - id: arrma-granite
@@ -50,7 +50,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0DVN2TBMB?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "ARRMA Granite RC truck RTR"
-  image_url: "https://m.media-amazon.com/images/I/71Rj4wxUcvL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/71Rj4wxUcvL._AC_SL1500_.jpg"
   blurb: "Monster-truck styling with genuinely rebuildable hobby-grade internals at a lower price than Traxxas."
 
 - id: losi-micro-b
@@ -65,7 +65,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0DJ3M2Q56?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "Losi Micro-B 2WD Buggy RTR"
-  image_url: "https://m.media-amazon.com/images/I/61pTOtE+M4L._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/61pTOtE+M4L._AC_SL1500_.jpg"
   blurb: "A genuinely different kind of step-up: this is a 1/24 micro buggy, not a scaled-down truck, built by Losi (Horizon Hobby's racing-focused brand) with an aluminum chassis and real oil-filled shocks. Rated 4.4 stars across 245 Amazon.ca ratings -- a cheap, well-reviewed way into actual RC racing once bashing around the yard stops being enough."
 
 - id: redcat-volcano-epx
@@ -79,7 +79,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B00HVBVNVG?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "Redcat Racing Volcano EPX RTR"
-  image_url: "https://m.media-amazon.com/images/I/61RsiPuYcYL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/61RsiPuYcYL._AC_SL1500_.jpg"
   blurb: "The current Volcano -- 4WD, brushed motor, aluminum-capped oil-filled shocks, and unlike a lot of budget RTRs it actually ships with the battery, charger, and radio included. Rated 4.1 stars across 95 Amazon.ca ratings. A legitimate hobby-grade truck at a noticeably lower price than Traxxas."
 
 - id: deerc-9309e
@@ -93,7 +93,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0F21LY3KT?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "DEERC 9309E RC truck"
-  image_url: "https://m.media-amazon.com/images/I/71be7NLxnyL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/71be7NLxnyL._AC_SL1500_.jpg"
   blurb: "Toy-grade, not hobby-grade -- but genuinely waterproof, ships with two batteries, and a legitimately fun budget basher if you just want to drive something today."
 
 - id: hylukon-drift-car
@@ -103,7 +103,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0FYN7YF56?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "Hylukon 1:43 Scale Mini RC Drift Car"
-  image_url: "https://m.media-amazon.com/images/I/71QCFRYZuHL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/71QCFRYZuHL._AC_SL1500_.jpg"
   blurb: "A completely different category from everything else on this list: a palm-sized 1:43 desktop drift car with a gyro and interchangeable tires, built to slide around on a desk or coffee table, not a driveway. Cheap, genuinely entertaining, and the easiest 'try this hobby' gift there is."
 
 - id: bezgar-tx123
@@ -116,7 +116,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0CFL856R5?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "BEZGAR TX123 RC Boat"
-  image_url: "https://m.media-amazon.com/images/I/81IJu1z9FlL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/81IJu1z9FlL._AC_SL1500_.jpg"
   blurb: "Not the premium hobby-grade brushless boat Traxxas or Pro Boat would sell you -- but it's a genuinely well-reviewed, self-righting (180-degree capsize recovery) RC boat that ships with two batteries, a carrying case, and LED lights for night runs. Rated 4.4 stars across 105 Amazon.ca ratings."
 
 - id: bezgar-tx126
@@ -129,7 +129,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0DBLC7F2M?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "BEZGAR TX126 RC Boat"
-  image_url: "https://m.media-amazon.com/images/I/81xOo2Cjk6L._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/81xOo2Cjk6L._AC_SL1500_.jpg"
   blurb: "A smaller, cheaper way to learn the fundamentals -- one-click self-righting, waterproof, and rated 4.2 stars across a genuinely large sample of 528 Amazon.ca ratings, which is about as much real-world confidence as a budget RC boat gets."
 
 - id: arris-jet-boat
@@ -142,7 +142,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0G566SY4F?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "ARRIS RC Jet Boat self-righting"
-  image_url: "https://m.media-amazon.com/images/I/71ZUOGU0zOL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/71ZUOGU0zOL._AC_SL1500_.jpg"
   blurb: "A genuinely different pick: water-jet propulsion instead of an exposed propeller, which means it shrugs off weeds and shallow water that would foul a normal RC boat. Self-righting, ships with two batteries for 40+ minutes of total runtime, rated 4.2 stars across 76 Amazon.ca ratings."
 
 - id: volantex-sport-cub
@@ -155,7 +155,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0C2PNK4JZ?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "VOLANTEXRC Sport Cub 500mm RTF"
-  image_url: "https://m.media-amazon.com/images/I/61ic357GKTL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/61ic357GKTL._AC_SL1500_.jpg"
   blurb: "Not a HobbyZone/SAFE plane, but VOLANTEXRC's Xpilot gyro system does the same job: a 3-level assist system (beginner/intermediate/expert) that keeps first flights forgiving and lets you dial the help back as you improve, plus a prop saver that absorbs crash impact. Rated 4.5 stars on Amazon.ca."
 
 - id: hawks-work-glider
@@ -168,7 +168,7 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B088P5HBY5?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "HAWK'S WORK 2CH RC Glider"
-  image_url: "https://m.media-amazon.com/images/I/61NTA77xCrL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/61NTA77xCrL._AC_SL1500_.jpg"
   blurb: "Smaller and simpler than the Sport Cub above -- a lightweight foam glider built to survive slight crashes rather than a full 4-channel trainer. Genuinely well-reviewed (4.1 stars across 115 Amazon.ca ratings) for what it is: an easy, cheap way to fly in a park or schoolyard without needing a big open field."
 
 - id: volantex-ranger600
@@ -182,5 +182,5 @@
   affiliate_url_override: "https://www.amazon.ca/dp/B0D7HTQZQG?tag=rcadventurehu-20"
   merchant_name: "Amazon"
   search_query: "VOLANTEXRC Ranger600 Stunt Glider RTF"
-  image_url: "https://m.media-amazon.com/images/I/61AHhXkICRL._AC_SX522_.jpg"
+  image_url: "https://m.media-amazon.com/images/I/61AHhXkICRL._AC_SL1500_.jpg"
   blurb: "Once you can take off, fly a pattern, and land without help, this is a genuine step up rather than a STOL bush plane -- a bigger 600mm glider with real aerobatic capability and a rear-thrust design that lets it glide unpowered to stretch flight time past 20 minutes. Rated 4.3 stars across 113 Amazon.ca ratings."
