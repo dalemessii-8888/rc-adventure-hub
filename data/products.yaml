@@ -53,29 +53,34 @@
   image_url: "https://m.media-amazon.com/images/I/71Rj4wxUcvL._AC_SX522_.jpg"
   blurb: "Monster-truck styling with genuinely rebuildable hobby-grade internals at a lower price than Traxxas."
 
-- id: arrma-typhon
-  name: "ARRMA Typhon"
+- id: losi-micro-b
+  name: "Losi Micro-B 2WD Buggy"
   category: cars
-  # Not currently sold as a complete vehicle on Amazon.ca (only spare
-  # parts show up there) -- Horizon Hobby is the real source, same as
-  # every other ARRMA/Horizon Hobby brand on this site.
-  merchant: avantlink
-  merchant_name: "Horizon Hobby"
-  pending_product_url: "https://www.horizonhobby.com/product/arrma-1-8-typhon-223s-dsc-4x4-rtr-brushless-buggy-green/ARA4306V4.html"
-  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dwea33ea2b/Images/ARA/ARA4306V4T1_A73_FGQ8H94Z.jpg"
-  search_query: "ARRMA Typhon 4x4 RTR"
-  blurb: "A buggy built for speed once you've outgrown a beginner truck."
-
-- id: redcat-racing-volcano
-  name: "Redcat Racing Volcano"
-  category: cars
-  # Heads up: this model appears to be discontinued -- it no longer
-  # turns up as a complete vehicle on Amazon.ca, AMain Hobbies, or
-  # Horizon Hobby, only legacy replacement parts. Worth swapping this
-  # pick for a currently-sold Redcat model when you get a chance.
+  # Replaces the ARRMA Typhon pick (never sold as a complete vehicle on
+  # Amazon.ca -- see git history). This is a real Amazon.ca listing,
+  # 4.4 stars across 245 ratings at the time of writing. It's a 1/24
+  # micro buggy rather than a 1/10 truck like the rest of this list --
+  # said so plainly in the copy below rather than pretending otherwise.
   merchant: amazon
-  search_query: "Redcat Racing Volcano RC truck RTR"
-  blurb: "Budget-friendly hobby-grade entry point, good for testing whether the hobby is for you before spending Traxxas money."
+  affiliate_url_override: "https://www.amazon.ca/dp/B0DJ3M2Q56?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "Losi Micro-B 2WD Buggy RTR"
+  image_url: "https://m.media-amazon.com/images/I/61pTOtE+M4L._AC_SX522_.jpg"
+  blurb: "A genuinely different kind of step-up: this is a 1/24 micro buggy, not a scaled-down truck, built by Losi (Horizon Hobby's racing-focused brand) with an aluminum chassis and real oil-filled shocks. Rated 4.4 stars across 245 Amazon.ca ratings -- a cheap, well-reviewed way into actual RC racing once bashing around the yard stops being enough."
+
+- id: redcat-volcano-epx
+  name: "Redcat Racing Volcano EPX"
+  category: cars
+  # Replaces the old "Redcat Racing Volcano" pick, which had gone fully
+  # discontinued (no listing anywhere). The Volcano EPX is the current
+  # version of the same product line, genuinely sold on Amazon.ca,
+  # 4.1 stars across 95 ratings at the time of writing.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B00HVBVNVG?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "Redcat Racing Volcano EPX RTR"
+  image_url: "https://m.media-amazon.com/images/I/61RsiPuYcYL._AC_SX522_.jpg"
+  blurb: "The current Volcano -- 4WD, brushed motor, aluminum-capped oil-filled shocks, and unlike a lot of budget RTRs it actually ships with the battery, charger, and radio included. Rated 4.1 stars across 95 Amazon.ca ratings. A legitimate hobby-grade truck at a noticeably lower price than Traxxas."
 
 - id: deerc-9309e
   name: "DEERC 9309E"
