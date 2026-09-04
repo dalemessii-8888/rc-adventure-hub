@@ -106,71 +106,81 @@
   image_url: "https://m.media-amazon.com/images/I/71QCFRYZuHL._AC_SX522_.jpg"
   blurb: "A completely different category from everything else on this list: a palm-sized 1:43 desktop drift car with a gyro and interchangeable tires, built to slide around on a desk or coffee table, not a driveway. Cheap, genuinely entertaining, and the easiest 'try this hobby' gift there is."
 
-- id: traxxas-spartan
-  name: "Traxxas Spartan SR"
+- id: bezgar-tx123
+  name: "BEZGAR TX123 RC Boat"
   category: boats
-  merchant: avantlink
-  merchant_name: "AMain Hobbies"
-  pending_product_url: "https://www.amainhobbies.com/traxxas-spartan-sr-6s-highperformance-brushless-rtr-race-boat-green-tra103076-4-grn/p1552468"
-  image_url: "https://images.amainhobbies.com/cdn-cgi/image/f=auto,width=950/images/large/tra/tra103076-4-grn.jpg"
-  search_query: "Traxxas Spartan SR boat"
-  blurb: "Brushless, self-righting race boat -- the benchmark 'first serious RC boat' for adults."
+  # Replaces the Traxxas Spartan SR pick (never sold as a complete boat
+  # on Amazon.ca -- only a trailer accessory shows up there). Real
+  # Amazon.ca listing, 4.4 stars across 105 ratings at time of writing.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0CFL856R5?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "BEZGAR TX123 RC Boat"
+  image_url: "https://m.media-amazon.com/images/I/81IJu1z9FlL._AC_SX522_.jpg"
+  blurb: "Not the premium hobby-grade brushless boat Traxxas or Pro Boat would sell you -- but it's a genuinely well-reviewed, self-righting (180-degree capsize recovery) RC boat that ships with two batteries, a carrying case, and LED lights for night runs. Rated 4.4 stars across 105 Amazon.ca ratings."
 
-- id: traxxas-blast
-  name: "Traxxas Blast"
+- id: bezgar-tx126
+  name: "BEZGAR TX126 RC Boat"
   category: boats
-  # Not currently sold as a complete boat on Amazon.ca either -- AMain
-  # Hobbies is the real source.
-  merchant: avantlink
-  merchant_name: "AMain Hobbies"
-  pending_product_url: "https://www.amainhobbies.com/traxxas-blast-24-high-performance-rtr-race-boat-green-tra38104-8-grn/p1530900"
-  image_url: "https://images.amainhobbies.com/cdn-cgi/image/f=auto,width=950/images/large/tra/tra38104-8-grn.jpg"
-  search_query: "Traxxas Blast RC boat"
-  blurb: "A smaller, calmer entry point than the Spartan -- better for lakes and first-timers."
+  # Replaces the Traxxas Blast pick (also never sold as a complete boat
+  # on Amazon.ca). Real Amazon.ca listing, 4.2 stars across a large
+  # 528-rating sample at time of writing.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0DBLC7F2M?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "BEZGAR TX126 RC Boat"
+  image_url: "https://m.media-amazon.com/images/I/81xOo2Cjk6L._AC_SX522_.jpg"
+  blurb: "A smaller, cheaper way to learn the fundamentals -- one-click self-righting, waterproof, and rated 4.2 stars across a genuinely large sample of 528 Amazon.ca ratings, which is about as much real-world confidence as a budget RC boat gets."
 
-- id: pro-boat-recoil
-  name: "Pro Boat Recoil"
+- id: arris-jet-boat
+  name: "ARRIS RC Jet Boat"
   category: boats
-  # Pro Boat is a Horizon Hobby brand and isn't sold as a complete boat
-  # on Amazon.ca -- Horizon Hobby is the real source.
-  merchant: avantlink
-  merchant_name: "Horizon Hobby"
-  pending_product_url: "https://www.horizonhobby.com/product/pro-boat-recoil-2-v2-26-self-righting-brushless-deep-v-rtr-shreddy/PRB08041V2.html"
-  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dwb6a710ac/Images/PRB/PRB08041V2T1_A5_O8ZXKW3B.jpg"
-  search_query: "Pro Boat Recoil RC boat"
-  blurb: "Self-righting brushless hull aimed squarely at adult hobbyists who want speed without constant capsizing."
+  # Replaces the Pro Boat Recoil pick (a Horizon Hobby brand, not sold
+  # as a complete boat on Amazon.ca). Real Amazon.ca listing, 4.2 stars
+  # across 76 ratings at time of writing.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0G566SY4F?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "ARRIS RC Jet Boat self-righting"
+  image_url: "https://m.media-amazon.com/images/I/71ZUOGU0zOL._AC_SX522_.jpg"
+  blurb: "A genuinely different pick: water-jet propulsion instead of an exposed propeller, which means it shrugs off weeds and shallow water that would foul a normal RC boat. Self-righting, ships with two batteries for 40+ minutes of total runtime, rated 4.2 stars across 76 Amazon.ca ratings."
 
-- id: hobbyzone-apprentice
-  name: "HobbyZone Apprentice STOL S"
+- id: volantex-sport-cub
+  name: "VOLANTEXRC Sport Cub 500mm"
   category: planes
-  # The "Apprentice S 2" has been succeeded by the "Apprentice STOL S
-  # 700mm" -- same idea (SAFE-protected beginner trainer), current
-  # generation. Not sold on Amazon.ca; Horizon Hobby is the real source.
-  merchant: avantlink
-  merchant_name: "Horizon Hobby"
-  pending_product_url: "https://www.horizonhobby.com/product/hobbyzone-apprentice-stol-s-700mm-rtf-with-safe/HBZ6100.html"
-  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dw558bfdd0/Images/HBZ/HBZ6100_A12_S45X20TG.jpg"
-  search_query: "HobbyZone Apprentice STOL S RC plane"
-  blurb: "Built-in flight envelope protection (SAFE tech) makes this one of the most forgiving trainer planes for true beginners."
+  # Replaces the HobbyZone Apprentice pick (a Horizon Hobby brand, not
+  # sold on Amazon.ca). Real Amazon.ca listing, 4.5 stars across 29
+  # ratings at time of writing.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0C2PNK4JZ?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "VOLANTEXRC Sport Cub 500mm RTF"
+  image_url: "https://m.media-amazon.com/images/I/61ic357GKTL._AC_SX522_.jpg"
+  blurb: "Not a HobbyZone/SAFE plane, but VOLANTEXRC's Xpilot gyro system does the same job: a 3-level assist system (beginner/intermediate/expert) that keeps first flights forgiving and lets you dial the help back as you improve, plus a prop saver that absorbs crash impact. Rated 4.5 stars on Amazon.ca."
 
-- id: hobbyzone-sport-cub
-  name: "HobbyZone Sport Cub S 2"
+- id: hawks-work-glider
+  name: "HAWK'S WORK 2CH RC Glider"
   category: planes
-  # Not sold on Amazon.ca; Horizon Hobby is the real source.
-  merchant: avantlink
-  merchant_name: "Horizon Hobby"
-  pending_product_url: "https://www.horizonhobby.com/product/hobbyzone-sport-cub-s-2-rtf-with-safe/HBZ444000.html"
-  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dw373bb1d4/Images/HBZ/HBZ444000_A14_7KE8VBLR.jpg"
-  search_query: "HobbyZone Sport Cub S 2 RC plane"
-  blurb: "Small, slow, park-flyable, and nearly impossible to seriously damage in a beginner crash."
+  # Replaces the HobbyZone Sport Cub S 2 pick (also not sold on
+  # Amazon.ca). Real Amazon.ca listing, 4.1 stars across 115 ratings
+  # at time of writing.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B088P5HBY5?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "HAWK'S WORK 2CH RC Glider"
+  image_url: "https://m.media-amazon.com/images/I/61NTA77xCrL._AC_SX522_.jpg"
+  blurb: "Smaller and simpler than the Sport Cub above -- a lightweight foam glider built to survive slight crashes rather than a full 4-channel trainer. Genuinely well-reviewed (4.1 stars across 115 Amazon.ca ratings) for what it is: an easy, cheap way to fly in a park or schoolyard without needing a big open field."
 
-- id: eflite-timber
-  name: "E-flite Timber"
+- id: volantex-ranger600
+  name: "VOLANTEXRC Ranger600 Stunt Glider"
   category: planes
-  # Not sold on Amazon.ca; Horizon Hobby is the real source.
-  merchant: avantlink
-  merchant_name: "Horizon Hobby"
-  pending_product_url: "https://www.horizonhobby.com/product/e-flite-timber-1.5m-10th-anniversary-special-edition-bnf-basic-with-as3x-and-safe-select/EFL-3352.html"
-  image_url: "https://www.horizonhobby.com/on/demandware.static/-/Sites-horizon-master/default/dw58c161ff/Images/EFL/EFL-3352_A3_M49881QI.jpg"
-  search_query: "E-flite Timber RC plane"
-  blurb: "STOL-style trainer for pilots who've soloed the basics and want a plane that handles rougher fields and grass strips."
+  # Replaces the E-flite Timber pick (a Horizon Hobby brand, not sold
+  # on Amazon.ca). Real Amazon.ca listing, 4.3 stars across 113
+  # ratings at time of writing. Not a STOL bush plane like the Timber
+  # was -- said so plainly in the copy below.
+  merchant: amazon
+  affiliate_url_override: "https://www.amazon.ca/dp/B0D7HTQZQG?tag=rcadventurehu-20"
+  merchant_name: "Amazon"
+  search_query: "VOLANTEXRC Ranger600 Stunt Glider RTF"
+  image_url: "https://m.media-amazon.com/images/I/61AHhXkICRL._AC_SX522_.jpg"
+  blurb: "Once you can take off, fly a pattern, and land without help, this is a genuine step up rather than a STOL bush plane -- a bigger 600mm glider with real aerobatic capability and a rear-thrust design that lets it glide unpowered to stretch flight time past 20 minutes. Rated 4.3 stars across 113 Amazon.ca ratings."
