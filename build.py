@@ -39,9 +39,6 @@ MERCHANT_SEARCH_TEMPLATES = {
 }
 
 CATEGORY_META = {
-    "cars": ("RC Cars", "Hobby-grade RC car buying guides, comparisons, and picks for adults."),
-    "planes": ("RC Planes", "Beginner-safe RC plane buying guides and picks for adult pilots."),
-    "boats": ("RC Boats", "Self-righting, brushless RC boat buying guides and picks for adults."),
     "guides": ("Guides", "Evergreen buying guides that apply across the whole RC hobby."),
 }
 
