@@ -53,7 +53,10 @@ def load_yaml(path):
 
 def build_amazon_url(search_query, amazon_tag):
     q = urllib.parse.quote_plus(search_query)
-    return f"https://www.amazon.com/s?k={q}&tag={urllib.parse.quote_plus(amazon_tag)}"
+    # amazon.ca, not amazon.com: Amazon Associates tags are marketplace-
+    # specific, and this site's tag was issued by Amazon.ca Associates.
+    # A .com link with a .ca tag tracks no commission at all.
+    return f"https://www.amazon.ca/s?k={q}&tag={urllib.parse.quote_plus(amazon_tag)}"
 
 
 def resolve_product_link(product, config):
