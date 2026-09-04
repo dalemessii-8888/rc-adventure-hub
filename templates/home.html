@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}{{ site.name }} -- {{ site.tagline }}{% endblock %}
+{% block meta_description %}{{ site.description }}{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{{ site.tagline }}</h1>
+    <p class="lede">{{ site.description }}</p>
+  </div>
+</section>
+
+<section class="wrap category-grid">
+  <a class="category-card" href="/cars/">
+    <span class="emoji">🚗</span>
+    <h2>RC Cars</h2>
+    <p>Hobby-grade trucks and buggies worth buying, and what to skip.</p>
+  </a>
+  <a class="category-card" href="/planes/">
+    <span class="emoji">✈️</span>
+    <h2>RC Planes</h2>
+    <p>Trainer aircraft that actually survive a beginner's first flights.</p>
+  </a>
+  <a class="category-card" href="/boats/">
+    <span class="emoji">🚤</span>
+    <h2>RC Boats</h2>
+    <p>Self-righting, brushless picks for lake-ready adult hobbyists.</p>
+  </a>
+</section>
+
+<section class="wrap article-list">
+  <h2>Latest Guides</h2>
+  <ul class="article-index">
+    {% for a in articles %}
+    <li>
+      <a href="{{ a.url }}">
+        <span class="tag tag-{{ a.category }}">{{ a.category }}</span>
+        <span class="article-title">{{ a.title }}</span>
+      </a>
+      <p class="article-desc">{{ a.meta_description }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% endblock %}

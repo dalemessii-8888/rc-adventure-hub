@@ -1,0 +1,39 @@
+# ============================================================
+# SITE-WIDE CONFIG
+# Fill these in as you set things up. Nothing breaks if a field
+# is still a placeholder -- the site builds either way, it just
+# shows "coming soon" style links until you fill them in.
+# ============================================================
+
+site:
+  name: "RC Adventure Hub"
+  tagline: "Real-world buying guides for RC cars, planes & boats"
+  # Set this once you register a domain. Used for canonical URLs / sitemap.
+  url: "https://www.example.com"
+  description: >
+    Independent buying guides, comparisons, and reviews for adult RC
+    hobbyists -- cars, planes, and boats. We help you avoid buying the
+    wrong RC vehicle for your skill level and budget.
+  contact_email: "hello@example.com"
+
+# ------------------------------------------------------------
+# AFFILIATE PROGRAMS
+# ------------------------------------------------------------
+# amazon_tag: your Amazon Associates tracking ID, looks like "yourtag-20"
+#   Get one at https://affiliate-program.amazon.com (free, instant account,
+#   but Amazon requires 3 qualifying sales within 180 days or they close it,
+#   so don't apply until the site has some real content and a little traffic).
+#   Once you have it, every "Check Price on Amazon" button on the site
+#   automatically becomes a valid affiliate link -- you only edit it here.
+amazon_tag: "YOUR-AMAZON-TAG-20"
+
+# avantlink_id: your AvantLink affiliate/website ID. AvantLink is the
+#   network that runs the Horizon Hobby and AMain Hobbies affiliate
+#   programs (both pay 3-5%, 45/15-day cookies). Apply at
+#   https://www.avantlink.com after you have a live site to submit.
+avantlink_id: "YOUR-AVANTLINK-ID"
+
+# shareasale_id: your ShareASale affiliate ID. Runs programs for brands
+#   like Genstattu and Bezgar (6-15% commission, 60-day cookie). Apply at
+#   https://www.shareasale.com/newsignup.cfm
+shareasale_id: "YOUR-SHAREASALE-ID"

@@ -1,0 +1,90 @@
+# ============================================================
+# PRODUCT / LINK CATALOG
+# ============================================================
+# Every product mentioned in an article should have an entry here.
+# Articles reference products by their `id`. This is the ONLY place
+# affiliate destinations are decided, so swapping a link, fixing a
+# typo, or upgrading a product from an Amazon link to a higher-paying
+# AvantLink link happens in exactly one place instead of hunting
+# through every article that mentions it.
+#
+# merchant: one of "amazon" | "avantlink" | "shareasale" | "direct"
+#   amazon     -> builds an Amazon search link with your amazon_tag
+#   avantlink  -> builds a placeholder AvantLink click-through link
+#                 (needs a real merchant_id once you're approved --
+#                 see automation/AVANTLINK_SETUP.md)
+#   shareasale -> same idea, for ShareASale-network brands
+#   direct     -> plain non-affiliate link, used as a safe fallback
+#                 while an application is pending
+# ============================================================
+
+- id: traxxas-slash-4x4
+  name: "Traxxas Slash 4X4"
+  category: cars
+  merchant: amazon
+  search_query: "Traxxas Slash 4X4 RTR"
+  blurb: "The default recommendation for a first hobby-grade RC car -- tough, widely supported, huge parts availability."
+
+- id: arrma-granite
+  name: "ARRMA Granite"
+  category: cars
+  merchant: amazon
+  search_query: "ARRMA Granite RC truck RTR"
+  blurb: "Monster-truck styling with genuinely rebuildable hobby-grade internals at a lower price than Traxxas."
+
+- id: arrma-typhon
+  name: "ARRMA Typhon"
+  category: cars
+  merchant: amazon
+  search_query: "ARRMA Typhon 4x4 RTR"
+  blurb: "A buggy built for speed once you've outgrown a beginner truck."
+
+- id: redcat-racing-volcano
+  name: "Redcat Racing Volcano"
+  category: cars
+  merchant: amazon
+  search_query: "Redcat Racing Volcano RC truck RTR"
+  blurb: "Budget-friendly hobby-grade entry point, good for testing whether the hobby is for you before spending Traxxas money."
+
+- id: traxxas-spartan
+  name: "Traxxas Spartan SR"
+  category: boats
+  merchant: avantlink
+  merchant_name: "AMain Hobbies"
+  search_query: "Traxxas Spartan SR boat"
+  blurb: "Brushless, self-righting race boat -- the benchmark 'first serious RC boat' for adults."
+
+- id: traxxas-blast
+  name: "Traxxas Blast"
+  category: boats
+  merchant: amazon
+  search_query: "Traxxas Blast RC boat"
+  blurb: "A smaller, calmer entry point than the Spartan -- better for lakes and first-timers."
+
+- id: pro-boat-recoil
+  name: "Pro Boat Recoil"
+  category: boats
+  merchant: amazon
+  search_query: "Pro Boat Recoil RC boat"
+  blurb: "Self-righting brushless hull aimed squarely at adult hobbyists who want speed without constant capsizing."
+
+- id: hobbyzone-apprentice
+  name: "HobbyZone Apprentice S 2"
+  category: planes
+  merchant: amazon
+  search_query: "HobbyZone Apprentice S 2 RC plane"
+  blurb: "Built-in flight envelope protection (SAFE tech) makes this one of the most forgiving trainer planes for true beginners."
+
+- id: hobbyzone-sport-cub
+  name: "HobbyZone Sport Cub S 2"
+  category: planes
+  merchant: amazon
+  search_query: "HobbyZone Sport Cub S 2 RC plane"
+  blurb: "Small, slow, park-flyable, and nearly impossible to seriously damage in a beginner crash."
+
+- id: eflite-timber
+  name: "E-flite Timber"
+  category: planes
+  merchant: amazon
+  search_query: "E-flite Timber RC plane"
+  blurb: "STOL-style trainer for pilots who've soloed the basics and want a plane that handles rougher fields and grass strips."
