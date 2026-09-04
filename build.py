@@ -105,11 +105,11 @@ def render_product_card(product_id, products_by_id, config):
     )
     return f"""
 <div class="product-card">
-  {image_html}
   <div class="product-card-body">
     <h3>{product['name']}</h3>
     <p>{product['blurb']}</p>
   </div>
+  {image_html}
   <a class="cta-button" href="{url}" rel="sponsored nofollow noopener" target="_blank">
     {label} {pending_badge}
   </a>
