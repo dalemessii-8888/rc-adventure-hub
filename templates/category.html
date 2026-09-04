@@ -3,22 +3,23 @@
 {% block meta_description %}{{ category_description }}{% endblock %}
 {% block content %}
 
-<section class="wrap page-header">
-  <h1>{{ category_label }}</h1>
-  <p class="lede">{{ category_description }}</p>
+<section class="page-header-bar">
+  <div class="wrap">
+    <h1>{{ category_label }}</h1>
+    <p class="lede">{{ category_description }}</p>
+  </div>
 </section>
 
-<section class="wrap article-list">
-  <ul class="article-index">
+<section class="wrap guide-section">
+  <div class="guide-grid">
     {% for a in articles %}
-    <li>
-      <a href="{{ a.url }}">
-        <span class="article-title">{{ a.title }}</span>
-      </a>
+    <a class="guide-card" href="{{ a.url }}">
+      <h3 class="article-title">{{ a.title }}</h3>
       <p class="article-desc">{{ a.meta_description }}</p>
-    </li>
+      <span class="read-more">Read the Guide &rarr;</span>
+    </a>
     {% endfor %}
-  </ul>
+  </div>
 </section>
 
 {% endblock %}
