@@ -4,7 +4,7 @@ slug: "best-beginner-rc-planes-for-adults"
 category: planes
 meta_description: "The RC planes actually worth buying as your first trainer aircraft, and why beginner-protection tech matters more than looks."
 date: 2026-09-04
-products: [hobbyzone-apprentice, hobbyzone-sport-cub, eflite-timber]
+products: [volantex-sport-cub, hawks-work-glider, volantex-ranger600]
 ---
 
 RC planes have a steeper learning curve than RC cars or boats -- a bad decision with a car means you hit a curb, a bad decision with a plane means it's in a tree or in three pieces on the ground. That's exactly why the single most important thing to look for in a first RC plane isn't looks or speed, it's whether the plane has beginner flight-envelope protection built in.
@@ -17,23 +17,23 @@ If you're buying a first RC plane without this kind of assistance to save money,
 
 ## Our picks
 
-### Best true first plane: HobbyZone Apprentice S 2
+### Best true first plane: VOLANTEXRC Sport Cub 500mm
 
-This is the plane most flight instructors and hobby shops point true first-timers toward. It has the strongest beginner-assist flight modes in its class, is genuinely capable of teaching you to solo, and grows with you -- you can dial the assistance back as your skills improve instead of needing to buy a second, "real" plane once you've outgrown it.
+HobbyZone's Apprentice isn't sold on Amazon.ca (see the honest note in the product card below), so this is the real, currently-buyable alternative -- and it does the same job. Instead of SAFE, it uses VOLANTEXRC's own Xpilot gyro system: a 3-level assist mode (beginner/intermediate/expert) that keeps your first flights forgiving and lets you dial the help back as your skills improve, plus a prop saver that absorbs crash impact.
 
-{{product:hobbyzone-apprentice}}
+{{product:volantex-sport-cub}}
 
-### Best small/park-flyable option: HobbyZone Sport Cub S 2
+### Best small/park-flyable option: HAWK'S WORK 2CH RC Glider
 
-Smaller and slower than the Apprentice, which sounds like a downgrade but is actually an advantage if you don't have access to a big open flying field. It's genuinely hard to seriously damage in a beginner-level crash, and it flies happily in a large park or schoolyard.
+Smaller and simpler than the Sport Cub above, which sounds like a downgrade but is actually an advantage if you don't have access to a big open flying field. It's a lightweight foam glider built to survive slight crashes, and it flies happily in a large park or schoolyard.
 
-{{product:hobbyzone-sport-cub}}
+{{product:hawks-work-glider}}
 
-### Best "next plane" once you've soloed: E-flite Timber
+### Best "next plane" once you've soloed: VOLANTEXRC Ranger600 Stunt Glider
 
-Once you can take off, fly a pattern, and land without help, the Timber is a natural next step -- a STOL-style (short takeoff and landing) trainer that tolerates rougher grass strips and gives you room to start practicing more advanced flying without needing an actual RC-club-grade aircraft yet.
+Once you can take off, fly a pattern, and land without help, this is a genuine next step -- though worth being upfront that it's a bigger 600mm aerobatic glider, not a STOL (short takeoff and landing) bush plane like the pick this replaces. Its rear-thrust design lets it glide unpowered to stretch flight time past 20 minutes, and it gives you real room to start practicing more advanced flying without needing an actual RC-club-grade aircraft yet.
 
-{{product:eflite-timber}}
+{{product:volantex-ranger600}}
 
 ## Practical advice before you buy
 
