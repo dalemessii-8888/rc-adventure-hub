@@ -1,27 +1,44 @@
 :root {
-  --ink: #1a1d21;
-  --ink-soft: #52585f;
-  --bg: #fdfcfa;
-  --bg-alt: #f4f1ec;
-  --accent: #c1571f;
-  --accent-dark: #9c4415;
+  --ink: #201c35;
+  --ink-soft: #5c5a72;
+  --bg: #ffffff;
+  --bg-alt: #f5f4fb;
+  --accent: #7c3aed;
+  --accent-dark: #5b21b6;
+  --accent-blue: #2563eb;
+  --accent-blue-dark: #1d4ed8;
   --card-bg: #ffffff;
-  --border: #e5e1d8;
+  --border: #e6e3f3;
   --radius: 10px;
   --max: 880px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #f1efe9;
-    --ink-soft: #b7b2a6;
-    --bg: #171613;
-    --bg-alt: #201e1a;
-    --card-bg: #221f1b;
-    --border: #35322b;
-    --accent: #e2793a;
-    --accent-dark: #f2934f;
+  :root:not([data-theme="light"]) {
+    --ink: #eeedf9;
+    --ink-soft: #b3aecb;
+    --bg: #14111f;
+    --bg-alt: #1c1830;
+    --card-bg: #201b36;
+    --border: #332c52;
+    --accent: #a78bfa;
+    --accent-dark: #c4b5fd;
+    --accent-blue: #60a5fa;
+    --accent-blue-dark: #93c5fd;
   }
+}
+
+:root[data-theme="dark"] {
+  --ink: #eeedf9;
+  --ink-soft: #b3aecb;
+  --bg: #14111f;
+  --bg-alt: #1c1830;
+  --card-bg: #201b36;
+  --border: #332c52;
+  --accent: #a78bfa;
+  --accent-dark: #c4b5fd;
+  --accent-blue: #60a5fa;
+  --accent-blue-dark: #93c5fd;
 }
 
 * { box-sizing: border-box; }
@@ -52,7 +69,11 @@ body {
   flex-wrap: wrap; gap: 12px;
 }
 .brand {
-  font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none;
+  font-weight: 800; font-size: 1.2rem; text-decoration: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .main-nav a {
   color: var(--ink-soft); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.95rem;
@@ -62,7 +83,7 @@ body {
 
 /* Hero */
 .hero {
-  background: var(--bg-alt);
+  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg) 70%);
   padding: 56px 0 40px;
   border-bottom: 1px solid var(--border);
 }
@@ -87,7 +108,7 @@ body {
   color: var(--ink);
   transition: transform 0.12s ease, border-color 0.12s ease;
 }
-.category-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.category-card:hover { transform: translateY(-2px); border-color: var(--accent-blue); }
 .category-card .emoji { font-size: 1.8rem; }
 .category-card h2 { margin: 8px 0 6px; font-size: 1.15rem; }
 .category-card p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
@@ -118,9 +139,9 @@ body {
   color: var(--ink-soft);
   border: 1px solid var(--border);
 }
-.tag-cars { color: #a34518; }
-.tag-planes { color: #1c6ba0; }
-.tag-boats { color: #146b52; }
+.tag-cars { color: var(--accent); }
+.tag-planes { color: var(--accent-blue); }
+.tag-boats { color: var(--accent-blue-dark); }
 
 /* Page / article header */
 .page-header { padding-top: 40px; }
@@ -134,7 +155,7 @@ body {
 .prose h3 { font-size: 1.1rem; margin-top: 1.8em; }
 .prose p { color: var(--ink); }
 .prose ul, .prose ol { padding-left: 1.3em; }
-.prose a { color: var(--accent-dark); }
+.prose a { color: var(--accent-blue-dark); }
 
 /* Inline product photos (hand-embedded in article markdown) */
 .product-photo {
@@ -145,6 +166,7 @@ body {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   margin: 1.4em 0;
+  background: #fff;
 }
 
 /* Product CTA cards */
@@ -161,11 +183,22 @@ body {
   padding: 18px 20px;
   margin: 1.6em 0;
 }
+.product-card-photo {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  padding: 4px;
+}
+.product-card-body { flex: 1 1 240px; }
 .product-card-body h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .product-card-body p { margin: 0; color: var(--ink-soft); font-size: 0.93rem; max-width: 480px; }
 .cta-button {
   white-space: nowrap;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-blue));
   color: #fff !important;
   font-weight: 700;
   text-decoration: none;
@@ -173,7 +206,7 @@ body {
   border-radius: 8px;
   font-size: 0.9rem;
 }
-.cta-button:hover { background: var(--accent-dark); }
+.cta-button:hover { background: linear-gradient(90deg, var(--accent-dark), var(--accent-blue-dark)); }
 .pending-badge {
   display: block;
   font-size: 0.65rem;
