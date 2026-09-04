@@ -136,6 +136,17 @@ body {
 .prose ul, .prose ol { padding-left: 1.3em; }
 .prose a { color: var(--accent-dark); }
 
+/* Inline product photos (hand-embedded in article markdown) */
+.product-photo {
+  display: block;
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: 1.4em 0;
+}
+
 /* Product CTA cards */
 .product-card {
   display: flex;
