@@ -5,42 +5,93 @@
 
 <section class="hero">
   <div class="wrap">
+    <span class="eyebrow">Built for adult hobbyists</span>
     <h1>{{ site.tagline }}</h1>
     <p class="lede">{{ site.description }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-yellow" href="/cars/">Shop RC Cars</a>
+      <a class="btn btn-outline" href="/guides/">Browse All Guides</a>
+    </div>
   </div>
 </section>
 
-<section class="wrap category-grid">
-  <a class="category-card" href="/cars/">
-    <span class="emoji">🚗</span>
-    <h2>RC Cars</h2>
-    <p>Hobby-grade trucks and buggies worth buying, and what to skip.</p>
-  </a>
-  <a class="category-card" href="/planes/">
-    <span class="emoji">✈️</span>
-    <h2>RC Planes</h2>
-    <p>Trainer aircraft that actually survive a beginner's first flights.</p>
-  </a>
-  <a class="category-card" href="/boats/">
-    <span class="emoji">🚤</span>
-    <h2>RC Boats</h2>
-    <p>Self-righting, brushless picks for lake-ready adult hobbyists.</p>
-  </a>
+<div class="wrap">
+  <div class="category-grid">
+    <a class="category-card" href="/cars/">
+      <div class="tile-photo"><img src="https://m.media-amazon.com/images/I/611o54Yh6PL._AC_SX522_.jpg" alt="RC Cars" loading="lazy"></div>
+      <div class="tile-label">
+        <h2>RC Cars</h2>
+        <p>Hobby-grade trucks and buggies worth buying, and what to skip.</p>
+      </div>
+    </a>
+    <a class="category-card" href="/planes/">
+      <div class="tile-photo"><img src="https://m.media-amazon.com/images/I/61ic357GKTL._AC_SX522_.jpg" alt="RC Planes" loading="lazy"></div>
+      <div class="tile-label">
+        <h2>RC Planes</h2>
+        <p>Trainer aircraft that actually survive a beginner's first flights.</p>
+      </div>
+    </a>
+    <a class="category-card" href="/boats/">
+      <div class="tile-photo"><img src="https://m.media-amazon.com/images/I/81IJu1z9FlL._AC_SX522_.jpg" alt="RC Boats" loading="lazy"></div>
+      <div class="tile-label">
+        <h2>RC Boats</h2>
+        <p>Self-righting, brushless picks for lake-ready adult hobbyists.</p>
+      </div>
+    </a>
+    <a class="category-card no-photo" href="/guides/">
+      <div class="tile-photo">🧭</div>
+      <div class="tile-label">
+        <h2>Guides</h2>
+        <p>Evergreen advice that applies across the whole RC hobby.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<section class="trust-section">
+  <div class="wrap">
+    <h2 class="section-heading on-navy center">Why Trust These Picks</h2>
+    <p class="section-sub on-navy center">We buy into the same honesty standard on every guide on this site.</p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">⭐</span>
+        <h3>Every Pick Is 4+ Stars</h3>
+        <p>We only recommend products with real, verified 4-star-or-better ratings on Amazon.ca -- not brand names picked on reputation alone.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🔍</span>
+        <h3>We Tell You What's Different</h3>
+        <p>When a pick isn't literally the same tier as the product it replaces, we say so in plain language -- no quietly swapping in a downgrade.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🔗</span>
+        <h3>Real, Live Amazon Links</h3>
+        <p>Every product on this site links to a real, currently-buyable Amazon.ca listing -- no dead links, no "coming soon."</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="wrap article-list">
-  <h2>Latest Guides</h2>
-  <ul class="article-index">
+<section class="wrap guide-section">
+  <h2 class="section-heading">Latest Guides</h2>
+  <p class="section-sub">No-nonsense buying advice for every corner of the hobby.</p>
+  <div class="guide-grid">
     {% for a in articles %}
-    <li>
-      <a href="{{ a.url }}">
-        <span class="tag tag-{{ a.category }}">{{ a.category }}</span>
-        <span class="article-title">{{ a.title }}</span>
-      </a>
+    <a class="guide-card" href="{{ a.url }}">
+      <span class="tag tag-{{ a.category }}">{{ a.category }}</span>
+      <h3 class="article-title">{{ a.title }}</h3>
       <p class="article-desc">{{ a.meta_description }}</p>
-    </li>
+      <span class="read-more">Read the Guide &rarr;</span>
+    </a>
     {% endfor %}
-  </ul>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>New to RC? Start With Our Beginner's Guide</h2>
+    <a class="btn btn-yellow" href="/guides/rc-hobby-101-beginners-guide/">Read RC Hobby 101</a>
+  </div>
 </section>
 
 {% endblock %}
