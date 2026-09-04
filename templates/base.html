@@ -6,6 +6,9 @@
 <title>{% block title %}{{ site.name }}{% endblock %}</title>
 <meta name="description" content="{% block meta_description %}{{ site.description }}{% endblock %}">
 <link rel="canonical" href="{{ site.url }}{{ canonical_path|default('/') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/">🛠️ {{ site.name }}</a>
+    <a class="brand" href="/">🛠️ RC <span class="brand-accent">Adventure</span> Hub</a>
     <nav class="main-nav">
       <a href="/cars/">Cars</a>
       <a href="/planes/">Planes</a>
@@ -29,16 +32,21 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="disclosure-line">
-      RC Adventure Hub is reader-supported. Some links on this site are affiliate links -- see our
-      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.
-    </p>
-    <nav class="footer-nav">
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-    </nav>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🛠️ RC Adventure Hub</div>
+        <p class="disclosure-line">
+          RC Adventure Hub is reader-supported. Some links on this site are affiliate links -- see our
+          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.
+        </p>
+      </div>
+      <nav class="footer-nav">
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
+        <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      </nav>
+    </div>
     <p class="copyright">&copy; {{ year }} {{ site.name }}. All product names and trademarks are property of their respective owners.</p>
   </div>
 </footer>
