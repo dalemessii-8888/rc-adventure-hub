@@ -4,7 +4,7 @@ slug: "best-rc-boats-for-adults"
 category: boats
 meta_description: "Which RC boats are worth buying for adult hobbyists, why self-righting hulls matter, and what to check before you take one to open water."
 date: 2026-09-04
-products: [traxxas-spartan, traxxas-blast, pro-boat-recoil]
+products: [bezgar-tx123, bezgar-tx126, arris-jet-boat]
 ---
 
 RC boats get less attention than RC cars and planes, but they're arguably the lowest-hassle way into the hobby -- no crash-prone flight envelope to learn, no gravel to tear up suspension parts, just point it at open water and go. The main things that separate a good adult RC boat from a frustrating one are hull self-righting, brushless power, and knowing what water you're actually going to run it in before you buy.
@@ -21,23 +21,23 @@ RC boats get less attention than RC cars and planes, but they're arguably the lo
 
 ## Our picks
 
-### Best "serious first boat": Traxxas Spartan SR
+### Best all-around pick: BEZGAR TX123
 
-The Spartan is the boat most often recommended as a first genuinely fast RC boat for adults -- brushless, self-righting, and backed by the same parts ecosystem that makes Traxxas cars easy to keep running. It's faster than most true beginners need on day one, so treat the throttle with respect until you know the boat.
+Traxxas and Pro Boat don't actually sell a complete boat on Amazon.ca right now (see the honest note in the product card below), so this is the real, well-reviewed alternative: self-righting, ships with two batteries and a carrying case, and rated 4.4 stars across 105 Amazon.ca ratings. It won't out-run a Spartan, but it's a genuine, currently-buyable "first RC boat."
 
-{{product:traxxas-spartan}}
+{{product:bezgar-tx123}}
 
-### Best calmer starting point: Traxxas Blast
+### Best budget entry point: BEZGAR TX126
 
-If the Spartan sounds like more boat than you want to start with, the Blast is a smaller, slower, noticeably cheaper way to learn RC boating fundamentals -- reading how a hull behaves, judging wind drift, getting a feel for throttle control -- before stepping up.
+A smaller, cheaper way to learn RC boating fundamentals -- reading how a hull behaves, judging wind drift, getting a feel for throttle control -- before stepping up. One-click self-righting, and rated 4.2 stars across a genuinely large sample of 528 Amazon.ca ratings.
 
-{{product:traxxas-blast}}
+{{product:bezgar-tx126}}
 
-### Best alternative brushless pick: Pro Boat Recoil
+### Best alternative pick: ARRIS RC Jet Boat
 
-A genuine competitor to the Spartan in the same "fast, self-righting, brushless" category, worth cross-shopping on price and current availability rather than treating either as the automatic default.
+A genuinely different kind of boat rather than a straight competitor: water-jet propulsion instead of an exposed propeller, so it shrugs off weeds and shallow water that would foul a normal propeller. Self-righting, two batteries for 40+ minutes of runtime, rated 4.2 stars across 76 Amazon.ca ratings.
 
-{{product:pro-boat-recoil}}
+{{product:arris-jet-boat}}
 
 ## Before you take any RC boat to open water
 
