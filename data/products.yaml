@@ -46,6 +46,22 @@
   search_query: "Redcat Racing Volcano RC truck RTR"
   blurb: "Budget-friendly hobby-grade entry point, good for testing whether the hobby is for you before spending Traxxas money."
 
+- id: deerc-9309e
+  name: "DEERC 9309E"
+  category: cars
+  merchant: amazon
+  # Direct product link (with ASIN) rather than a search link, since this
+  # is a specific model pick rather than a "search and pick one" brand.
+  # NOTE: this bypasses the amazon_tag in config.yaml -- once you have a
+  # real Amazon Associates tag, add "?tag=YOUR-TAG-20" to the end of this
+  # URL by hand (this one product only; every other product on the site
+  # still picks up amazon_tag automatically).
+  affiliate_url_override: "https://www.amazon.ca/dp/B0F21LY3KT"
+  merchant_name: "Amazon"
+  search_query: "DEERC 9309E RC truck"
+  image_url: "https://m.media-amazon.com/images/I/71be7NLxnyL._AC_SX522_.jpg"
+  blurb: "Toy-grade, not hobby-grade -- but genuinely waterproof, ships with two batteries, and a legitimately fun budget basher if you just want to drive something today."
+
 - id: traxxas-spartan
   name: "Traxxas Spartan SR"
   category: boats
