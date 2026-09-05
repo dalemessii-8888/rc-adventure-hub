@@ -42,3 +42,10 @@ Once you can take off, fly a pattern, and land without help, this is a genuine n
 **Buy more batteries than you think you need.** Flight times on trainer planes are often 8-12 minutes. You will want more than one battery from day one.
 
 **Skip drones if what you actually want is "planes."** This sounds obvious, but a huge share of "RC plane" search traffic is actually people who want a camera drone. If you want to fly a fixed-wing aircraft and improve as a pilot, a trainer plane like the ones above is the right category. If you mainly want aerial photos or an easy hover-and-go experience, you likely want a drone instead, which is a different buying guide entirely.
+
+## Where to go next
+
+- [RC Hobby 101: How to Pick Your First RC Car, Plane, or Boat](/guides/rc-hobby-101-beginners-guide/)
+- [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
+- [Best RC Cars for Adults](/cars/best-rc-cars-for-adults/)
+- [Best RC Boats for Adults](/boats/best-rc-boats-for-adults/)
