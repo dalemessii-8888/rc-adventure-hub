@@ -1,0 +1,10 @@
+{
+  "name": "RC Adventure Hub",
+  "short_name": "RC Adventure Hub",
+  "icons": [
+    { "src": "/static/img/logo-mark.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "theme_color": "#1b2472",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
