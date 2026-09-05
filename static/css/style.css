@@ -343,6 +343,23 @@ a { color: inherit; }
   line-height: 1.2;
 }
 
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs { padding: 14px 24px 0; }
+.breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+.breadcrumbs li:not(:last-child)::after { content: "/"; margin-left: 6px; color: var(--border); }
+.breadcrumbs a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 2px; }
+.breadcrumbs a:hover { color: var(--navy); }
+.breadcrumbs li[aria-current="page"] { color: var(--ink); font-weight: 600; }
+
 /* ---------- Page / category header bar ---------- */
 .page-header-bar {
   background: linear-gradient(120deg, var(--navy-deep), var(--navy));
