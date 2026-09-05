@@ -92,10 +92,11 @@ a { color: inherit; }
   text-decoration: none;
   color: var(--navy);
   display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
 }
 .brand .brand-accent { color: var(--yellow-dark); -webkit-text-stroke: 0.6px var(--navy); }
+.brand-mark { flex-shrink: 0; display: block; }
 .main-nav { display: flex; flex-wrap: wrap; gap: 4px; }
 .main-nav a {
   color: var(--navy);
@@ -478,6 +479,9 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--navy);
   font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .disclosure-line { font-size: 0.85rem; color: var(--ink-soft); margin: 10px 0 0; max-width: 420px; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 4px 20px; align-content: flex-start; }
