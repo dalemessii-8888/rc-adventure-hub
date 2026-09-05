@@ -66,3 +66,10 @@ Anything marketed heavily on speed alone ("70 MPH!!") without any mention of cha
 ## One thing nobody tells beginners
 
 Budget for a second battery and a real balance charger before your first drive, not after. Most RTR kits ship with a basic charger and one battery, which means about 15-20 minutes of driving before you're sitting around waiting to charge again. A second battery roughly doubles your seat time per session for a relatively small cost.
+
+## Where to go next
+
+- [RC Hobby 101: How to Pick Your First RC Car, Plane, or Boat](/guides/rc-hobby-101-beginners-guide/)
+- [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
+- [Best RC Boats for Adults](/boats/best-rc-boats-for-adults/)
+- [Best Beginner RC Planes for Adults](/planes/best-beginner-rc-planes-for-adults/)
