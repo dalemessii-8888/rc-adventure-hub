@@ -91,6 +91,56 @@ def resolve_product_link(product, config):
 PRODUCT_TAG_RE = re.compile(r"\{\{\s*product:([a-z0-9-]+)\s*\}\}")
 
 
+def resolve_article_image(meta, products_by_id, default_og_image):
+    """First mentioned product's real photo if there is one (makes a
+    shared guide link show the actual pick instead of a generic banner),
+    otherwise the site's default social-share image."""
+    for pid in meta.get("products") or []:
+        product = products_by_id.get(pid)
+        if product and product.get("image_url"):
+            return product["image_url"]
+    return default_og_image
+
+
+def build_breadcrumb_schema(site_url, article):
+    """BreadcrumbList JSON-LD matching the actual site structure -- cars/
+    planes/boats have no hub page (see git history), so only 'guides'
+    articles get a middle crumb; everything else is Home > Article."""
+    items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": site_url + "/"}]
+    position = 2
+    if article["category"] == "guides":
+        items.append({
+            "@type": "ListItem", "position": position,
+            "name": "Guides", "item": site_url + "/guides/",
+        })
+        position += 1
+    items.append({
+        "@type": "ListItem", "position": position,
+        "name": article["title"], "item": site_url + article["url"],
+    })
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
+
+
+def build_article_schema(site, org_logo_url, article):
+    date_str = article["date"].isoformat() if hasattr(article.get("date"), "isoformat") else str(article.get("date"))
+    return {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": article["title"],
+        "description": article["meta_description"],
+        "image": article["og_image"],
+        "datePublished": date_str,
+        "dateModified": date_str,
+        "author": {"@type": "Organization", "name": site["name"]},
+        "publisher": {
+            "@type": "Organization",
+            "name": site["name"],
+            "logo": {"@type": "ImageObject", "url": org_logo_url},
+        },
+        "mainEntityOfPage": {"@type": "WebPage", "@id": site["url"] + article["url"]},
+    }
+
+
 def render_product_card(product_id, products_by_id, config):
     product = products_by_id.get(product_id)
     if not product:
@@ -137,6 +187,7 @@ def process_body(md_text, products_by_id, config):
 
 
 def load_articles(products_by_id, config):
+    default_og_image = config["site"]["url"] + "/static/img/og-default.png"
     articles = []
     for path in sorted(CONTENT_DIR.glob("*.md")):
         raw = path.read_text(encoding="utf-8")
@@ -145,6 +196,7 @@ def load_articles(products_by_id, config):
         meta = yaml.safe_load(fm_text)
         meta["html"] = process_body(body, products_by_id, config)
         meta["url"] = f"/{meta['category']}/{meta['slug']}/" if meta["category"] != "page" else f"/{meta['slug']}/"
+        meta["og_image"] = resolve_article_image(meta, products_by_id, default_og_image)
         articles.append(meta)
     articles.sort(key=lambda a: a.get("date", date.min), reverse=True)
     return articles
@@ -169,7 +221,32 @@ def main():
         autoescape=select_autoescape(["html"]),
     )
 
-    common = {"site": config["site"], "year": date.today().year}
+    site_url = config["site"]["url"]
+    org_logo_url = site_url + "/static/img/logo-mark-180.png"
+    default_og_image = site_url + "/static/img/og-default.png"
+    org_schema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": config["site"]["name"],
+        "url": site_url + "/",
+        "logo": org_logo_url,
+    }
+    website_schema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": config["site"]["name"],
+        "url": site_url + "/",
+    }
+
+    common = {
+        "site": config["site"],
+        "year": date.today().year,
+        "default_og_image": default_og_image,
+        "org_schema": org_schema,
+        "website_schema": website_schema,
+        "search_console_verification": config.get("search_console_verification") or "",
+        "ga4_measurement_id": config.get("ga4_measurement_id") or "",
+    }
 
     # Home page
     real_articles = [a for a in articles if a["category"] != "page"]
@@ -201,16 +278,24 @@ def main():
     for a in articles:
         out_path = DIST_DIR / a["url"].strip("/") / "index.html"
         out_path.parent.mkdir(parents=True, exist_ok=True)
+        extra = {}
+        if a["category"] != "page":
+            extra["breadcrumb_schema"] = build_breadcrumb_schema(site_url, a)
+            extra["article_schema"] = build_article_schema(config["site"], org_logo_url, a)
         out_path.write_text(
-            art_tpl.render(**common, article=a, canonical_path=a["url"]),
+            art_tpl.render(**common, article=a, canonical_path=a["url"], **extra),
             encoding="utf-8",
         )
 
-    # sitemap.xml
-    urls = ["/"] + [f"/{c}/" for c in CATEGORY_META] + [a["url"] for a in articles]
+    # sitemap.xml (includes <lastmod> so crawlers can see what's fresh)
+    today_str = date.today().isoformat()
+    dated_urls = [("/", today_str)] + [(f"/{c}/", today_str) for c in CATEGORY_META]
+    for a in articles:
+        d = a.get("date")
+        dated_urls.append((a["url"], d.isoformat() if hasattr(d, "isoformat") else today_str))
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in urls:
-        sitemap.append(f"  <url><loc>{config['site']['url']}{u}</loc></url>")
+    for u, lastmod in dated_urls:
+        sitemap.append(f"  <url><loc>{site_url}{u}</loc><lastmod>{lastmod}</lastmod></url>")
     sitemap.append("</urlset>")
     (DIST_DIR / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
 
