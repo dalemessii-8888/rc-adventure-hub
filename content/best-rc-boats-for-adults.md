@@ -42,3 +42,10 @@ A genuinely different kind of boat rather than a straight competitor: water-jet 
 ## Before you take any RC boat to open water
 
 Check your local regulations -- some lakes, reservoirs, and parks restrict or ban RC boats, particularly gas/nitro models, and some require registration for anything above a certain speed or size. It's a five-minute search that avoids a genuinely annoying conversation with a park ranger.
+
+## Where to go next
+
+- [RC Hobby 101: How to Pick Your First RC Car, Plane, or Boat](/guides/rc-hobby-101-beginners-guide/)
+- [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
+- [Best RC Cars for Adults](/cars/best-rc-cars-for-adults/)
+- [Best Beginner RC Planes for Adults](/planes/best-beginner-rc-planes-for-adults/)
