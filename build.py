@@ -39,8 +39,12 @@ MERCHANT_SEARCH_TEMPLATES = {
 }
 
 CATEGORY_META = {
+    "gifts": ("Gift Guides", "RC gift ideas for adults, sorted by who you're shopping for -- with honest notes on what's in the box."),
     "guides": ("Guides", "Evergreen buying guides that apply across the whole RC hobby."),
 }
+
+# Categories that get a hub page and therefore a middle breadcrumb crumb.
+HUB_CATEGORIES = {cat: label for cat, (label, _) in CATEGORY_META.items()}
 
 
 def load_yaml(path):
@@ -88,6 +92,27 @@ def resolve_product_link(product, config):
     return url, f"Check Price at {merchant_name} (affiliate link pending)", True
 
 
+def build_gift_picks(holiday, products_by_id, config):
+    """Resolve config `holiday.home_gift_picks` into display dicts for the
+    homepage 'Top gift picks' row. Unknown ids fail the build loudly rather
+    than silently dropping a pick."""
+    picks = []
+    for pid in holiday.get("home_gift_picks") or []:
+        product = products_by_id.get(pid)
+        if product is None:
+            raise SystemExit(f"config.yaml holiday.home_gift_picks: unknown product id '{pid}'")
+        url, label, _pending = resolve_product_link(product, config)
+        picks.append({
+            "id": pid,
+            "name": product["name"],
+            "category": product.get("category", ""),
+            "image_url": product.get("image_url"),
+            "url": url,
+            "label": label,
+        })
+    return picks
+
+
 PRODUCT_TAG_RE = re.compile(r"\{\{\s*product:([a-z0-9-]+)\s*\}\}")
 
 
@@ -104,14 +129,16 @@ def resolve_article_image(meta, products_by_id, default_og_image):
 
 def build_breadcrumb_schema(site_url, article):
     """BreadcrumbList JSON-LD matching the actual site structure -- cars/
-    planes/boats have no hub page (see git history), so only 'guides'
-    articles get a middle crumb; everything else is Home > Article."""
+    planes/boats have no hub page (see git history), so only categories
+    with a hub page ('guides', 'gifts') get a middle crumb; everything
+    else is Home > Article."""
     items = [{"@type": "ListItem", "position": 1, "name": "Home", "item": site_url + "/"}]
     position = 2
-    if article["category"] == "guides":
+    if article["category"] in HUB_CATEGORIES:
         items.append({
             "@type": "ListItem", "position": position,
-            "name": "Guides", "item": site_url + "/guides/",
+            "name": HUB_CATEGORIES[article["category"]],
+            "item": f"{site_url}/{article['category']}/",
         })
         position += 1
     items.append({
@@ -238,8 +265,12 @@ def main():
         "url": site_url + "/",
     }
 
+    holiday = config.get("holiday") or {}
+
     common = {
         "site": config["site"],
+        "holiday": holiday,
+        "holiday_mode": bool(holiday.get("enabled")),
         "year": date.today().year,
         "default_og_image": default_og_image,
         "org_schema": org_schema,
@@ -250,9 +281,17 @@ def main():
 
     # Home page
     real_articles = [a for a in articles if a["category"] != "page"]
+    gift_articles = [a for a in real_articles if a["category"] == "gifts"]
+    non_gift_articles = [a for a in real_articles if a["category"] != "gifts"]
     home_tpl = env.get_template("home.html")
     (DIST_DIR / "index.html").write_text(
-        home_tpl.render(**common, articles=real_articles, canonical_path="/"),
+        home_tpl.render(
+            **common,
+            articles=non_gift_articles if common["holiday_mode"] else real_articles,
+            gift_articles=gift_articles,
+            gift_picks=build_gift_picks(holiday, products_by_id, config),
+            canonical_path="/",
+        ),
         encoding="utf-8",
     )
 

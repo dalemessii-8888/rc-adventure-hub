@@ -17,6 +17,36 @@ site:
   contact_email: "hello@example.com"
 
 # ------------------------------------------------------------
+# HOLIDAY GIFT MODE
+# One switch for the whole seasonal pivot. When `enabled` is true the
+# homepage leads with gift guides, the nav gets a "Gift Guides" link and
+# a banner shows site-wide. Set `enabled: false` in January and the
+# original evergreen homepage comes straight back (the /gifts/ pages stay
+# live and can be left up year-round for birthdays and Father's Day).
+# ------------------------------------------------------------
+holiday:
+  enabled: true
+  banner: "Holiday gift guide is live: RC picks for the adult hobbyist on your list."
+  banner_link: "/gifts/rc-gift-guide-2026/"
+  banner_link_label: "See the picks"
+  hero_eyebrow: "Holiday 2026 gift guide"
+  hero_title: "RC gifts adults will actually use"
+  hero_lede: >
+    Picking an RC gift for someone else is easy to get wrong -- wrong skill
+    level, missing batteries, a toy that breaks in a week. Our guides sort
+    real, well-reviewed picks by who you're shopping for, and flag what's
+    (and isn't) in the box.
+  # Product ids (from products.yaml) featured on the homepage "Top gift
+  # picks" row. Order matters. Keep it to 6 or fewer.
+  home_gift_picks:
+    - hylukon-drift-car
+    - bezgar-tx126
+    - bezgar-tx123
+    - volantex-sport-cub
+    - arrma-granite
+    - losi-micro-b
+
+# ------------------------------------------------------------
 # SEO / ANALYTICS (all free, no payment required -- but each still needs
 # YOUR OWN Google account to set up, so Claude can't create these for you)
 # ------------------------------------------------------------

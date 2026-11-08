@@ -326,6 +326,92 @@ a { color: inherit; }
   color: #fff;
 }
 .tag-cars, .tag-planes, .tag-boats, .tag-guides { background: var(--navy); color: #fff; }
+.tag-gifts { background: var(--yellow); color: var(--navy); }
+
+/* ---------- Holiday gift mode ---------- */
+.holiday-banner {
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.holiday-banner .wrap {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 4px 16px; padding-top: 9px; padding-bottom: 9px; text-align: center;
+}
+.holiday-banner a {
+  color: var(--navy);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.holiday-banner a:hover { text-decoration-thickness: 2px; }
+
+.main-nav a.nav-gifts {
+  background: var(--yellow);
+  border-radius: 6px;
+  border-bottom-color: transparent;
+}
+.main-nav a.nav-gifts:hover { background: var(--yellow-dark); border-bottom-color: transparent; }
+
+.hero-holiday::after { opacity: 0.14; }
+
+.category-grid.no-overlap { margin-top: 0; margin-bottom: 0; }
+
+.gift-picks-section { padding: 8px 0 64px; }
+.gift-picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.gift-pick {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+.gift-pick:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(16, 22, 79, 0.12);
+  border-color: var(--navy);
+}
+.gift-pick-photo {
+  height: 190px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  padding: 12px;
+}
+.gift-pick-photo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.gift-pick-body { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.gift-pick-body h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.3;
+  margin: 0;
+}
+.gift-pick-body .read-more {
+  margin-top: auto;
+  font-family: var(--font-head);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+}
+.gift-pick:hover .read-more { color: var(--yellow-dark); }
+.gift-picks-note { margin: 22px 0 0; font-size: 0.88rem; color: var(--ink-soft); }
+.gift-picks-note a { color: var(--navy); text-decoration-color: var(--yellow); text-decoration-thickness: 2px; }
 
 /* ---------- Bottom CTA banner ---------- */
 .cta-banner {

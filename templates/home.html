@@ -1,22 +1,9 @@
 {% extends "base.html" %}
-{% block title %}{{ site.name }} -- {{ site.tagline }}{% endblock %}
-{% block meta_description %}{{ site.description }}{% endblock %}
-{% block content %}
+{% block title %}{% if holiday_mode %}{{ holiday.hero_title }} -- {{ site.name }}{% else %}{{ site.name }} -- {{ site.tagline }}{% endif %}{% endblock %}
+{% block meta_description %}{% if holiday_mode %}Holiday RC gift guide for adults: well-reviewed RC cars, planes and boats sorted by who you're shopping for, with honest notes on what's in the box.{% else %}{{ site.description }}{% endif %}{% endblock %}
 
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Built for adult hobbyists</span>
-    <h1>{{ site.tagline }}</h1>
-    <p class="lede">{{ site.description }}</p>
-    <div class="hero-actions">
-      <a class="btn btn-yellow" href="/cars/best-rc-cars-for-adults/">Shop RC Cars</a>
-      <a class="btn btn-outline" href="/guides/">Browse All Guides</a>
-    </div>
-  </div>
-</section>
-
-<div class="wrap">
-  <div class="category-grid">
+{% macro category_grid(extra_class="") %}
+  <div class="category-grid {{ extra_class }}">
     <a class="category-card" href="/cars/best-rc-cars-for-adults/">
       <div class="tile-photo"><img src="https://m.media-amazon.com/images/I/611o54Yh6PL._AC_SX522_.jpg" alt="Hobby-grade RC truck for adults, off-road" loading="lazy"></div>
       <div class="tile-label">
@@ -46,6 +33,123 @@
       </div>
     </a>
   </div>
+{% endmacro %}
+
+{% block content %}
+
+{% if holiday_mode %}
+
+<section class="hero hero-holiday">
+  <div class="wrap">
+    <span class="eyebrow">{{ holiday.hero_eyebrow }}</span>
+    <h1>{{ holiday.hero_title }}</h1>
+    <p class="lede">{{ holiday.hero_lede }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-yellow" href="/gifts/rc-gift-guide-2026/">See the Gift Guide</a>
+      <a class="btn btn-outline" href="/gifts/rc-gift-checklist/">Before You Buy: Checklist</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="category-grid">
+    <a class="category-card" href="/gifts/rc-gifts-for-someone-new-to-rc/">
+      <div class="tile-photo"><img src="https://m.media-amazon.com/images/I/71QCFRYZuHL._AC_SL1500_.jpg" alt="Palm-sized RC desktop drift car, an easy first RC gift" loading="lazy"></div>
+      <div class="tile-label">
+        <h2>Never Tried RC</h2>
+        <p>Low-risk first gifts that work out of the box and survive a rough start.</p>
+      </div>
+    </a>
+    <a class="category-card" href="/gifts/rc-gifts-for-people-who-already-have-rc/">
+      <div class="tile-photo"><img src="https://m.media-amazon.com/images/I/61AHhXkICRL._AC_SL1500_.jpg" alt="RC stunt glider, a step-up gift for an experienced hobbyist" loading="lazy"></div>
+      <div class="tile-label">
+        <h2>Already Has RC</h2>
+        <p>Step-up gifts for someone who's outgrown their first car, plane or boat.</p>
+      </div>
+    </a>
+    <a class="category-card no-photo" href="/gifts/rc-gift-checklist/">
+      <div class="tile-photo">✅</div>
+      <div class="tile-label">
+        <h2>Gift Checklist</h2>
+        <p>Batteries, charger, skill level: what to check so it works on the day.</p>
+      </div>
+    </a>
+    <a class="category-card no-photo" href="/gifts/rc-gift-guide-2026/">
+      <div class="tile-photo">🎁</div>
+      <div class="tile-label">
+        <h2>Full Gift Guide</h2>
+        <p>Every pick in one place, by car, plane and boat.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+{% if gift_picks %}
+<section class="wrap gift-picks-section">
+  <h2 class="section-heading">Top Gift Picks</h2>
+  <p class="section-sub">Every one is a real, currently-listed Amazon.ca product. Read the guide for who each one suits and what's in the box.</p>
+  <div class="gift-picks-grid">
+    {% for p in gift_picks %}
+    <a class="gift-pick" href="{{ p.url }}" rel="sponsored nofollow noopener" target="_blank">
+      {% if p.image_url %}<div class="gift-pick-photo"><img src="{{ p.image_url }}" alt="{{ p.name }}" loading="lazy"></div>{% endif %}
+      <div class="gift-pick-body">
+        <span class="tag tag-{{ p.category }}">{{ p.category }}</span>
+        <h3>{{ p.name }}</h3>
+        <span class="read-more">{{ p.label }} &rarr;</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="gift-picks-note">Prices and delivery dates change, so check the listing for current availability before you order. <a href="/gifts/rc-gift-checklist/">Our pre-purchase checklist</a> covers the rest.</p>
+</section>
+{% endif %}
+
+<section class="trust-section">
+  <div class="wrap">
+    <h2 class="section-heading on-navy center">Why Trust These Gift Picks</h2>
+    <p class="section-sub on-navy center">A gift that arrives broken, incomplete or too advanced is worse than no gift. Here's how we avoid that.</p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">⭐</span>
+        <h3>Every Pick Is 4+ Stars</h3>
+        <p>We only recommend products with real, verified 4-star-or-better ratings on Amazon.ca -- not brand names picked on reputation alone.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🔋</span>
+        <h3>We Flag What's Not In The Box</h3>
+        <p>Missing batteries and chargers are the #1 way an RC gift flops on the day. If a pick ships without them, we say so.</p>
+      </div>
+      <div class="trust-card">
+        <span class="trust-icon">🔗</span>
+        <h3>Real, Live Amazon Links</h3>
+        <p>Every product on this site links to a real, currently-buyable Amazon.ca listing -- no dead links, no "coming soon."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap guide-section">
+  <h2 class="section-heading">Shop By Vehicle Type</h2>
+  <p class="section-sub">Already know whether it's a car, plane or boat? Jump straight to the full buying guide.</p>
+  {{ category_grid("no-overlap") }}
+</section>
+
+{% else %}
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Built for adult hobbyists</span>
+    <h1>{{ site.tagline }}</h1>
+    <p class="lede">{{ site.description }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-yellow" href="/cars/best-rc-cars-for-adults/">Shop RC Cars</a>
+      <a class="btn btn-outline" href="/guides/">Browse All Guides</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  {{ category_grid() }}
 </div>
 
 <section class="trust-section">
@@ -72,8 +176,10 @@
   </div>
 </section>
 
+{% endif %}
+
 <section class="wrap guide-section">
-  <h2 class="section-heading">Latest Guides</h2>
+  <h2 class="section-heading">{% if holiday_mode %}More Buying Guides{% else %}Latest Guides{% endif %}</h2>
   <p class="section-sub">No-nonsense buying advice for every corner of the hobby.</p>
   <div class="guide-grid">
     {% for a in articles %}
@@ -89,8 +195,13 @@
 
 <section class="cta-banner">
   <div class="wrap">
+    {% if holiday_mode %}
+    <h2>Buying for a total beginner? Start with the checklist</h2>
+    <a class="btn btn-yellow" href="/gifts/rc-gift-checklist/">Read the Gift Checklist</a>
+    {% else %}
     <h2>New to RC? Start With Our Beginner's Guide</h2>
     <a class="btn btn-yellow" href="/guides/rc-hobby-101-beginners-guide/">Read RC Hobby 101</a>
+    {% endif %}
   </div>
 </section>
 
