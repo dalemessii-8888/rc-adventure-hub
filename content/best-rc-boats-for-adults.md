@@ -49,3 +49,5 @@ Check your local regulations -- some lakes, reservoirs, and parks restrict or ba
 - [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
 - [Best RC Cars for Adults](/cars/best-rc-cars-for-adults/)
 - [Best Beginner RC Planes for Adults](/planes/best-beginner-rc-planes-for-adults/)
+- [RC Gifts for Young Adults](/gifts/rc-gifts-for-young-adults/)
+- [RC Gift Buying Guide: Will They Actually Like It?](/gifts/rc-gift-buying-guide/)

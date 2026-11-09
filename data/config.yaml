@@ -41,6 +41,45 @@ search_console_verification: ""
 ga4_measurement_id: ""
 
 # ------------------------------------------------------------
+# GIFT SEASON SETTINGS
+# ------------------------------------------------------------
+# holiday_bar: slim announcement bar above the header on every page,
+#   linking to /gifts/. Set enabled: false after the season.
+# shipping_note: shown on gift pages. Keep it TRUE -- no made-up cutoff
+#   dates. If you want to name a real date, put it in order_by_note after
+#   checking Amazon.ca's published holiday delivery guidance yourself,
+#   e.g. "Amazon.ca's posted last-order date for Christmas delivery is ...".
+gifts:
+  holiday_bar:
+    enabled: true
+    text: "Buying an RC for a teen or young adult? See the holiday gift guides"
+    link_label: "Gift guides"
+  shipping_note: >
+    Delivery times stretch in December. Check the estimated delivery date
+    on the Amazon.ca listing before you buy, and order early so the gift
+    doesn't arrive late.
+  order_by_note: ""
+
+# ------------------------------------------------------------
+# EMAIL SIGNUP (optional)
+# ------------------------------------------------------------
+# Leave `action` blank and NO signup form is rendered (nothing breaks).
+# To turn it on: create a form in your email provider (Mailchimp,
+# ConvertKit/Kit, Buttondown, MailerLite, etc.), copy its form "action"
+# URL here, and set field_name to whatever its email input is called
+# (Mailchimp: EMAIL; Buttondown: email; most others: email).
+# Before enabling: update content/privacy-policy.md to say you collect
+# email addresses, and DON'T put Amazon affiliate links inside the emails
+# themselves (Amazon Associates rules) -- link to pages on this site.
+email_signup:
+  action: ""
+  method: "post"
+  field_name: "email"
+  headline: "Get the gift-deadline reminder"
+  blurb: "One or two emails before the holiday ordering window closes. Unsubscribe any time."
+  button_label: "Remind me"
+
+# ------------------------------------------------------------
 # AFFILIATE PROGRAMS
 # ------------------------------------------------------------
 # amazon_tag: your Amazon Associates tracking ID, looks like "yourtag-20"

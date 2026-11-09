@@ -519,3 +519,141 @@ a { color: inherit; }
   border-top: 1px solid var(--border);
   opacity: 0.85;
 }
+
+/* ============================================================
+   GIFT SEASON ADDITIONS
+   ============================================================ */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Holiday announcement bar ---------- */
+.holiday-bar { background: var(--yellow); color: var(--navy); font-size: 0.86rem; font-weight: 600; }
+.holiday-bar .wrap {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 4px 14px; padding-top: 8px; padding-bottom: 8px; text-align: center;
+}
+.holiday-bar a { color: var(--navy); font-family: var(--font-head); font-weight: 800; text-transform: uppercase; font-size: 0.76rem; letter-spacing: 0.04em; }
+
+.main-nav a.nav-gifts { background: var(--yellow); border-radius: 6px; border-bottom-color: transparent; }
+.main-nav a.nav-gifts:hover { background: var(--yellow-dark); border-bottom-color: transparent; }
+
+/* ---------- Homepage gift band ---------- */
+.gift-band { background: var(--yellow); padding: 46px 0; }
+.gift-band .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 40px; }
+.gift-band-text { flex: 1 1 420px; }
+.gift-band .eyebrow-dark {
+  font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.12em; font-size: 0.74rem; color: var(--navy);
+}
+.gift-band h2 {
+  font-family: var(--font-head); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.15; color: var(--navy); margin: 8px 0 10px;
+}
+.gift-band p { margin: 0; color: var(--navy-deep); max-width: 560px; }
+.gift-band-links { display: flex; flex-wrap: wrap; gap: 10px; flex: 0 1 420px; }
+.btn-outline-navy { background: transparent; border-color: var(--navy); color: var(--navy) !important; }
+.btn-outline-navy:hover { background: rgba(27,36,114,0.08); }
+
+/* ---------- Affiliate note under article H1 ---------- */
+.affiliate-note {
+  margin: 14px 0 0; padding: 10px 14px; font-size: 0.82rem; color: var(--ink-soft);
+  background: var(--bg-alt); border-left: 3px solid var(--yellow-dark); border-radius: 4px; line-height: 1.5;
+}
+.affiliate-note a { color: var(--navy); }
+
+/* ---------- Callouts ---------- */
+.callout { border-radius: var(--radius); padding: 16px 18px; margin: 1.6em 0; font-size: 0.95rem; line-height: 1.55; }
+.callout-ship { background: #fff8d6; border: 1px solid #ecdc5b; border-left: 5px solid var(--yellow-dark); }
+.callout-safety { background: #eef0ff; border: 1px solid #cfd3f5; border-left: 5px solid var(--navy); }
+
+/* ---------- Quick picks ---------- */
+.quickpicks {
+  background: var(--navy); color: #fff; border-radius: var(--radius-lg);
+  padding: 22px 24px 8px; margin: 1.8em 0;
+}
+.prose .quickpicks h2 { color: #fff; margin: 0 0 14px; font-size: 1.1rem; text-transform: uppercase; }
+.quickpicks ul { list-style: none; margin: 0; padding: 0; }
+.quickpick {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; align-items: center;
+  padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.18);
+}
+.quickpick-label {
+  grid-column: 1 / -1; font-family: var(--font-head); font-weight: 800; font-size: 0.7rem;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--yellow);
+}
+.quickpick-name { font-family: var(--font-head); font-weight: 700; }
+.prose .quickpick-name a { color: #fff; text-decoration-color: var(--yellow); }
+.quickpick-why { grid-column: 1; font-size: 0.86rem; color: #c9cdf0; }
+.quickpick-cta {
+  grid-row: 2 / span 2; grid-column: 2; background: var(--yellow); color: var(--navy) !important;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.74rem; text-transform: uppercase;
+  text-decoration: none; padding: 10px 14px; border-radius: 6px; text-align: center; max-width: 190px;
+}
+.quickpick-cta:hover { background: var(--yellow-dark); }
+@media (max-width: 560px) {
+  .quickpick { grid-template-columns: 1fr; }
+  .quickpick-cta { grid-row: auto; grid-column: 1; max-width: none; margin-top: 8px; }
+}
+
+/* ---------- Product card additions ---------- */
+.badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; line-height: 1.2;
+  padding: 4px 9px; border-radius: 999px; border: 1px solid transparent;
+}
+.badge-grade { background: #fff; border-color: var(--border); color: var(--navy); }
+.badge-ok { background: #e4f6e8; border-color: #b6e3c0; color: #17602b; }
+.badge-warn { background: #fff1d6; border-color: #f0cf8a; color: #7a4a00; }
+.badge-neutral { background: var(--bg); border-color: var(--border); color: var(--ink-soft); font-weight: 600; }
+.best-for { margin: 0 0 8px !important; color: var(--ink) !important; }
+.pros-cons { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px 20px; margin-top: 12px; }
+.pros-cons h4 {
+  margin: 0 0 4px; font-family: var(--font-head); font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--navy);
+}
+.pros-cons ul { margin: 0; padding-left: 1.1em; font-size: 0.88rem; color: var(--ink-soft); }
+.pros-cons li { margin-bottom: 3px; }
+.cta-button { white-space: normal; }
+
+/* ---------- Gift quiz ---------- */
+.gift-hub-tools { padding-top: 32px; }
+.gift-quiz {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 26px 24px; margin: 1.6em 0;
+}
+.gift-quiz h2 { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; color: var(--navy); margin: 0 0 6px; }
+.quiz-sub { margin: 0 0 18px; color: var(--ink-soft); font-size: 0.92rem; }
+.quiz-form fieldset { border: 0; padding: 0; margin: 0 0 16px; }
+.quiz-form legend { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; padding: 0; }
+.quiz-form label { display: block; padding: 6px 0; cursor: pointer; font-size: 0.95rem; }
+.quiz-form input[type=radio] { margin-right: 8px; accent-color: var(--navy); }
+.quiz-result { margin-top: 22px; }
+.quiz-card { background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--yellow-dark); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 14px; }
+.quiz-card-kicker { font-family: var(--font-head); font-weight: 800; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.quiz-card h3 { margin: 4px 0 6px; font-family: var(--font-head); font-size: 1.1rem; color: var(--ink); }
+.quiz-card p { margin: 0 0 8px; color: var(--ink-soft); font-size: 0.92rem; }
+.quiz-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 12px; }
+.quiz-more { color: var(--navy); font-weight: 600; font-size: 0.88rem; }
+.quiz-note { font-size: 0.85rem; color: var(--ink-soft); }
+
+/* ---------- Email signup ---------- */
+.email-signup {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  background: var(--navy); color: #fff; border-radius: var(--radius-lg); padding: 22px 24px; margin: 2.4em 0 0;
+}
+.email-signup-text { flex: 1 1 100%; }
+.email-signup h3 { margin: 0 0 4px; font-family: var(--font-head); font-size: 1.1rem; color: #fff; }
+.email-signup p { margin: 0; color: #c9cdf0; font-size: 0.9rem; }
+.email-signup input[type=email] { flex: 1 1 220px; padding: 12px 14px; border-radius: 6px; border: 2px solid transparent; font-size: 1rem; }
+.email-signup .btn-navy { background: var(--yellow); color: var(--navy) !important; }
+.gift-hub-email { padding-bottom: 48px; }
+
+/* ---------- Gift page helpers ---------- */
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1.4em 0; }
+.prose table th, .prose table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+.prose table th { background: var(--bg-alt); font-family: var(--font-head); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--navy); }
+@media (max-width: 640px) { .prose table { display: block; overflow-x: auto; } }

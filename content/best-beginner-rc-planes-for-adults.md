@@ -49,3 +49,5 @@ Once you can take off, fly a pattern, and land without help, this is a genuine n
 - [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
 - [Best RC Cars for Adults](/cars/best-rc-cars-for-adults/)
 - [Best RC Boats for Adults](/boats/best-rc-boats-for-adults/)
+- [RC Gifts for Young Adults](/gifts/rc-gifts-for-young-adults/)
+- [RC Gift Buying Guide: Will They Actually Like It?](/gifts/rc-gift-buying-guide/)

@@ -28,6 +28,17 @@
   </div>
 </section>
 
+{% if category_key == 'gifts' %}
+<section class="wrap gift-hub-tools">
+  <p class="affiliate-note">
+    <strong>Affiliate disclosure:</strong> the quiz below links to products on Amazon.ca. We may earn a commission if you buy, at no extra cost to you.
+    As an Amazon Associate I earn from qualifying purchases. <a href="/affiliate-disclosure/">Details</a>
+  </p>
+  {{ shipping_note_html|safe }}
+  {{ quiz_html|safe }}
+</section>
+{% endif %}
+
 <section class="wrap guide-section">
   <div class="guide-grid">
     {% for a in articles %}
@@ -39,5 +50,9 @@
     {% endfor %}
   </div>
 </section>
+
+{% if category_key == 'gifts' and email_signup_html %}
+<section class="wrap gift-hub-email">{{ email_signup_html|safe }}</section>
+{% endif %}
 
 {% endblock %}

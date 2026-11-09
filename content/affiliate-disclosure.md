@@ -21,7 +21,7 @@ Being an affiliate site does not mean every product we mention pays us, and it d
 
 ## Programs we participate in (or plan to)
 
-- **Amazon Associates** -- an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.com.
+- **Amazon Associates** -- an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.ca and other Amazon sites. As an Amazon Associate I earn from qualifying purchases.
 - **AvantLink** -- an affiliate network through which we may link to brands including Horizon Hobby and AMain Hobbies.
 - **ShareASale** -- an affiliate network through which we may link to additional RC hobby brands.
 

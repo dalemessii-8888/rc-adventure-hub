@@ -12,7 +12,7 @@
 <nav class="breadcrumbs wrap" aria-label="Breadcrumb">
   <ol>
     <li><a href="/">Home</a></li>
-    {% if article.category == 'guides' %}<li><a href="/guides/">Guides</a></li>{% endif %}
+    {% if article.category in category_labels %}<li><a href="/{{ article.category }}/">{{ category_labels[article.category] }}</a></li>{% endif %}
     <li aria-current="page">{{ article.title }}</li>
   </ol>
 </nav>
@@ -26,11 +26,18 @@
     <span class="tag tag-{{ article.category }}">{{ article.category }}</span>
     {% endif %}
     <h1>{{ article.title }}</h1>
+    {% if article.products or article.affiliate_links %}
+    <p class="affiliate-note">
+      <strong>Affiliate disclosure:</strong> some links on this page are affiliate links, so we may earn a commission if you buy, at no extra cost to you.
+      As an Amazon Associate I earn from qualifying purchases. <a href="/affiliate-disclosure/">Details</a>
+    </p>
+    {% endif %}
   </header>
 
   <div class="prose">
     {{ article.html|safe }}
   </div>
+  {% if article.category == 'gifts' and email_signup_html %}{{ email_signup_html|safe }}{% endif %}
 </article>
 
 {% endblock %}

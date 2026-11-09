@@ -73,3 +73,5 @@ Budget for a second battery and a real balance charger before your first drive, 
 - [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
 - [Best RC Boats for Adults](/boats/best-rc-boats-for-adults/)
 - [Best Beginner RC Planes for Adults](/planes/best-beginner-rc-planes-for-adults/)
+- [Best RC Cars for Teens (a gift guide)](/gifts/best-rc-cars-for-teens/)
+- [RC Gift Buying Guide: Will They Actually Like It?](/gifts/rc-gift-buying-guide/)

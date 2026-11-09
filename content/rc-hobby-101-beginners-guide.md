@@ -48,3 +48,4 @@ Buying based on top speed or size alone, without checking parts availability fir
 - [Best Beginner RC Planes for Adults](/planes/best-beginner-rc-planes-for-adults/)
 - [Best RC Boats for Adults](/boats/best-rc-boats-for-adults/)
 - [Nitro vs. Electric: Which Power System Is Right for You?](/guides/nitro-vs-electric/)
+- [RC Gift Buying Guide: Will They Actually Like It?](/gifts/rc-gift-buying-guide/)

@@ -1,0 +1,144 @@
+# ============================================================
+# GIFT-BUYER METADATA (per product)
+# ============================================================
+# Optional extra fields shown on product cards so a gift buyer can
+# decide quickly. Keyed by the product `id` in products.yaml.
+#
+# RULES (same honesty standard as automation/CONTENT_GUIDE.md):
+#   - Only state what's already established in products.yaml / the
+#     articles, or what you've verified on the live Amazon.ca listing.
+#   - No prices, no top speeds, no runtimes. Prices go stale.
+#   - If you don't know whether something is in the box, leave
+#     `in_box` out. The card then shows a neutral "check the listing" hint.
+#
+# Fields:
+#   best_for:  one line -- who/where this is right for
+#   in_box:    what's confirmed included (shown as a badge)
+#   in_box_ok: true = green badge, false = amber "not included" badge
+#   grade:     "hobby" | "toy" | "desk" | "hobby-lite" (shown as a small label)
+#   pros / cons: short bullet lists (2-3 each, one short line each)
+# ============================================================
+
+traxxas-slash-4x4:
+  best_for: "A teen or young adult who wants a real, repairable truck for gravel, grass and dirt"
+  grade: hobby
+  in_box: "Battery & charger NOT included in this listing"
+  in_box_ok: false
+  pros:
+    - "Tough, and replacement parts are sold almost everywhere"
+    - "4WD handles loose surfaces much better than 2WD trucks"
+  cons:
+    - "This Amazon.ca listing is the higher-spec 'Ultimate' trim"
+    - "You must also buy a battery and charger before they can drive it"
+
+arrma-granite:
+  best_for: "A newer driver who wants hobby-grade parts support without the top-tier price"
+  grade: hobby
+  pros:
+    - "Genuinely rebuildable and upgradeable"
+    - "Heavier and slower than the Slash, so it's a bit more forgiving to learn on"
+  cons:
+    - "Confirm what's included (battery, charger) on the listing before gifting"
+
+losi-micro-b:
+  best_for: "Someone who already drives RC and wants a cheap way into racing-style driving"
+  grade: hobby
+  pros:
+    - "Aluminum chassis and real oil-filled shocks, not a toy underneath"
+    - "4.4 stars across 245 Amazon.ca ratings when this guide was written"
+  cons:
+    - "1/24 micro buggy: built for cornering and speed, not rough backyard bashing"
+    - "Not the best first car for a total beginner"
+
+redcat-volcano-epx:
+  best_for: "A first hobby-grade truck as a gift: everything needed to drive is in the box"
+  grade: hobby
+  in_box: "Battery, charger & radio included"
+  in_box_ok: true
+  pros:
+    - "Hobby-grade and repairable, at a noticeably lower price than Traxxas"
+    - "Nothing extra to buy before the first drive"
+  cons:
+    - "Thinner parts availability than Traxxas or ARRMA"
+    - "Less refined feel; a stepping stone more than a forever car"
+
+deerc-9309e:
+  best_for: "A younger teen or a 'let's see if they like it' gift, driven in the backyard"
+  grade: toy
+  in_box: "Two batteries included"
+  in_box_ok: true
+  pros:
+    - "Genuinely waterproof, not just splash-resistant"
+    - "Two batteries means more driving per charge session"
+  cons:
+    - "Toy-grade: sealed unit, so when it breaks you replace the truck"
+
+hylukon-drift-car:
+  best_for: "Apartment-dwellers and anyone who just wants to try RC: it runs on a desk or coffee table"
+  grade: desk
+  pros:
+    - "Gyro-assisted drifting, interchangeable tires, LED lights"
+    - "The easiest 'try this hobby' gift on the site"
+  cons:
+    - "Palm-sized and indoor-only: no dirt, no backyard driving"
+
+bezgar-tx123:
+  best_for: "A teen or young adult near a lake or pond who'd enjoy a more capable boat"
+  grade: hobby-lite
+  in_box: "Two batteries & carrying case included"
+  in_box_ok: true
+  pros:
+    - "Self-righting: recovers from a 180-degree capsize"
+    - "Ships with a carrying case and LED lights for evening runs"
+  cons:
+    - "Not a premium brushless hobby-grade boat"
+    - "They'll need access to open water"
+
+bezgar-tx126:
+  best_for: "A lower-cost boat gift to learn the fundamentals with"
+  grade: hobby-lite
+  pros:
+    - "One-click self-righting and waterproof"
+    - "4.2 stars across 528 Amazon.ca ratings when this guide was written"
+  cons:
+    - "Smaller and simpler than the TX123"
+    - "They'll need access to open water"
+
+arris-jet-boat:
+  best_for: "Weedy or shallow water where a regular propeller boat would foul"
+  grade: hobby-lite
+  in_box: "Two batteries included"
+  in_box_ok: true
+  pros:
+    - "Water-jet drive shrugs off weeds and shallow water"
+    - "Self-righting; two batteries for 40+ minutes total runtime"
+  cons:
+    - "They'll need access to open water"
+
+volantex-sport-cub:
+  best_for: "A first RC plane for a teen or adult: built-in flight assist forgives early mistakes"
+  grade: hobby-lite
+  pros:
+    - "3-level assist system you can dial back as skills improve"
+    - "Prop saver absorbs crash impact"
+  cons:
+    - "Needs an open field and calm weather"
+    - "Planes have a steeper learning curve than cars or boats"
+
+hawks-work-glider:
+  best_for: "A cheap, simple plane gift that can be flown in a park or schoolyard"
+  grade: hobby-lite
+  pros:
+    - "Lightweight foam built to survive slight crashes"
+    - "Doesn't need a big open field"
+  cons:
+    - "Smaller and simpler than a full trainer plane"
+
+volantex-ranger600:
+  best_for: "Someone who already flies and wants a step up in aerobatics and flight time"
+  grade: hobby-lite
+  pros:
+    - "Real aerobatic capability; can glide unpowered to stretch flight time"
+    - "4.3 stars across 113 Amazon.ca ratings when this guide was written"
+  cons:
+    - "A step up from a first plane, not a beginner gift"

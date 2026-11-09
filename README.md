@@ -11,7 +11,8 @@ templates/     Jinja2 HTML templates -- edit these to change the design
 static/        CSS (and later, images)
 build.py       Generates the site into dist/
 dist/          The finished, deployable website (generated -- don't hand-edit)
-automation/    Notes on the ongoing content pipeline
+automation/    Notes on the ongoing content pipeline (incl. GIFT_PROMOTION_PLAYBOOK.md)
+static/js/     Gift quiz (client-side only)
 ```
 
 ## Building the site locally
@@ -32,6 +33,13 @@ cd dist && python3 -m http.server 8000
 the CSS uses root-relative paths like `/static/...`, which only resolve
 correctly when served over http, not `file://`. This is normal and is exactly
 how the file will behave once deployed for real.)
+
+## Gift features (added Nov 2026)
+
+- `content/*.md` with `category: gifts` appear under `/gifts/`.
+- `data/gift_meta.yaml` adds badges, "best for" and pros/cons to product cards (verified facts only, no prices).
+- Shortcodes in articles: `{{quickpicks}}` (uses `quick_picks:` frontmatter), `{{shipping-note}}`, `{{battery-safety}}`, `{{gift-quiz}}`, `{{email-signup}}`.
+- `data/config.yaml`: `gifts:` (holiday bar, shipping note) and `email_signup:` (blank = no form).
 
 ## Adding a new article
 
